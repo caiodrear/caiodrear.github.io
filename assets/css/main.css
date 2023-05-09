@@ -60,7 +60,7 @@
 .hero {
   position: relative;
   background-color: var(--maximum-yellow-red_a10);
-  padding-block-start: calc(var(--section-padding) + 60px);
+  padding-block-start: calc(var(--section-padding));
   text-align: center;
   overflow: hidden;
 }
