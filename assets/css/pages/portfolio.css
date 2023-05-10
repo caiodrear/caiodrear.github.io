@@ -40,6 +40,11 @@
   padding-block-start: calc(var(--section-padding) + 60px);
 }
 
+.portfolio-index {
+  background-color: var(--maximum-yellow-red_a10);
+  padding-block-start: calc(var(--section-padding));
+}
+
 .portfolio-list,
 .portfolio-card { display: grid; }
 

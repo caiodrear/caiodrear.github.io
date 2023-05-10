@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="./assets/css/require.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/pages/contact.css">
+  <link rel="stylesheet" href="./assets/css/pages/portfolio.css">
 
   <!-- 
     - preload images
@@ -142,58 +143,7 @@
       <section class="section about" aria-label="about me">
         <div class="container">
 
-          <figure class="about-banner">
-            <img src="./assets/images/about-banner.png" width="580" height="554" loading="lazy"
-              alt="Annie, the blonde, dressed in a black tops with a smile on her face" class="w-100">
-          </figure>
-
-          <div class="about-content">
-
-            <h2 class="title-lg">I'm a Freelancer Front-end Developer with over 3 years of experience.</h2>
-
-            <p class="body-md section-text">
-              I'm a Freelancer Front-end Developer with over 3 years of experience. I'm from San Francisco. I code and
-              create web elements for amazing people around the world. I like work with new people. New people new
-              Experiences.
-            </p>
-
-            <ul class="about-list">
-
-              <li>
-                <p class="list-text">
-                  <strong class="strong title-md">285+</strong> Projet Completed
-                </p>
-              </li>
-
-              <li>
-                <p class="list-text">
-                  <strong class="strong title-md">190+</strong> Happy Clients
-                </p>
-              </li>
-
-            </ul>
-
-            <div class="wrapper">
-              <a href="#contact" class="btn btn-primary">Contact Me</a>
-
-              <a href="./portfolio.html" class="btn btn-secondary">Portfolio</a>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      <!-- 
-        - #SKILL
-      -->
-
-      <section class="section skill" aria-labelledby="skill-label">
-        <div class="container">
-
           <div class="skill-content">
-
-            <h2 class="section-title headline-md" id="skill-label">My Skills</h2>
 
             <ul class="skill-list">
 
@@ -273,10 +223,98 @@
 
           </div>
 
-          <figure class="skill-banner">
-            <img src="./assets/images/skill-banner.png" width="581" height="657" loading="lazy"
-              alt="Annie, the blonde, dressed in a green hoodie with a smile on her face" class="w-100">
-          </figure>
+          <div class="about-content">
+
+            <h2 class="title-lg">Welcome to my website.</h2>
+
+            <p class="body-md section-text">
+              Here, I keep a record of projects I am working on, or have worked on.
+              In addtion, cheifly for my own reference, I have recipes I'm fond of
+              and books I have been reading recently. 
+            </p>
+
+            <div class="wrapper">
+              <a href="#contact" class="btn btn-primary">Contact Me</a>
+
+              <a href="./portfolio.html" class="btn btn-secondary">Portfolio</a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #PORTFOLIO
+      -->
+
+      <section class="section portfolio-index" aria-labelledby="portfolio-label">
+        <div class="container">
+
+          <h2 class="section-title headline-md text-center" id="portfolio-label">Latest Projects</h2>
+
+          <ul class="portfolio-list">
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/portfolio-1.jpg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Web Design</span>
+
+                  <h3 class="title-md">Website Design for Marketing Agency Startup</h3>
+
+                  <p class="card-text">
+                    I design and develop services for customers of all sizes, specializing in creating stylish, modern
+                    websites, web services and online stores
+                  </p>
+
+                  <a href="#" class="btn btn-primary">View Project</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/portfolio-2.jpg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Mathematics</span>
+
+                  <h3 class="title-md">Website Design for Marketing Agency Startup</h3>
+
+                  <p class="card-text">
+                    I design and develop services for customers of all sizes, specializing in creating stylish, modern
+                    websites, web services and online stores
+                  </p>
+
+                  <a href="#" class="btn btn-primary">View Project</a>
+
+                </div>
+
+              </div>
+            </li>
+          </ul>
 
         </div>
       </section>
@@ -288,6 +326,11 @@
       <section id="contact" class="section contact has-bg-image" aria-labelledby="contact-label"
         style="background-image: url('./assets/images/contact-bg.png')">
         <div class="container">
+
+          <figure class="skill-banner">
+            <img src="./assets/images/skill-banner.png" width="581" height="657" loading="lazy"
+              alt="Annie, the blonde, dressed in a green hoodie with a smile on her face" class="w-100">
+          </figure>
 
           <form action="" class="contact-form">
 
