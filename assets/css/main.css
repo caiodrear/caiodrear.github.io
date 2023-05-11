@@ -361,7 +361,13 @@
     align-items: center;
   }
 
+  .about-content {
+    order: 1;
+  }
 
+  .skill-content {
+    order: -1;
+  }
 
   /**
    * HERO
