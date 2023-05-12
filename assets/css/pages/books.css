@@ -25,7 +25,7 @@
   #COMPONENTS
 \*-----------------------------------*/
 
-@import url('./components/btn.css');
+@import url('../components/btn.css');
 
 
 
@@ -82,7 +82,12 @@
   opacity: 1;
 }
 
-.portfolio-card .chip {
+.product-card .chip {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+
   background-color: var(--orange-red_a20);
   max-width: max-content;
   color: var(--jet);
@@ -151,19 +156,6 @@
 .product-card {
   position: relative;
   border: 1px solid var(--white_10);
-}
-
-.product-card .card-badge {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: var(--maximum-blue-green);
-  color: var(--xiketic);
-  font-size: var(--fs-8);
-  font-weight: var(--fw-700);
-  text-transform: uppercase;
-  padding: 3px 8px;
-  border-radius: var(--radius-pill);
 }
 
 .product-card .card-banner { position: relative; }
