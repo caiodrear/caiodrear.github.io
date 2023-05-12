@@ -48,6 +48,8 @@
 
 .card ion-icon { font-size: 3.2rem; }
 
+.card .flag { font-size: 3.2rem; }
+
 .card .body-sm { color: var(--jet); }
 
 
