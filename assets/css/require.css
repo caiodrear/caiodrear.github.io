@@ -401,9 +401,7 @@ body.loaded { overflow: visible; }
 
 .social-link:is(:hover, :focus-visible) { color: var(--orange-red); }
 
-
-
-
+.footer-credit {display: inline}
 
 /*-----------------------------------*\
   #MEDIA QUEREIS

@@ -38,9 +38,6 @@
 @import url("./components/card.css");
 
 
-
-
-
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -100,27 +97,6 @@
   margin-inline: auto;
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #CLIENT
-\*-----------------------------------*/
-
-.client {
-  background-color: var(--jet);
-  padding-block: 30px;
-}
-
-.client .slider-item { min-width: calc(50% - 15px); }
-
-.client .slider::-webkit-scrollbar { display: none; }
-
-
-
-
-
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -157,9 +133,6 @@
 }
 
 
-
-
-
 /*-----------------------------------*\
   #SKILLS
 \*-----------------------------------*/
@@ -176,97 +149,13 @@
   gap: 15px;
 }
 
-.skill .card ion-icon { font-size: 3rem; }
+.about .card ion-icon { font-size: 3rem; }
 
-.skill .card .card-title {
+.about .card .card-title {
   color: var(--jet);
   font-size: 1.6rem;
   font-weight: var(--fw-500);
 }
-
-
-
-
-
-/*-----------------------------------*\
-  #CTA
-\*-----------------------------------*/
-
-.cta {
-  background-color: var(--jet);
-  text-align: center;
-  padding-block: 46px 50px;
-}
-
-.cta .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-.cta .title-lg {
-  color: var(--white);
-  font-weight: var(--fw-500);
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #TESTIMONIALS
-\*-----------------------------------*/
-
-.testi .slider-item {
-  min-width: 100%;
-  scroll-margin-inline-start: 16px;
-}
-
-.testi .card {
-  position: relative;
-  z-index: 1;
-}
-
-.testi .card::after {
-  content: url("../images/quote-left.svg");
-  position: absolute;
-  bottom: 15px;
-  right: 25px;
-}
-
-.testi .client-name {
-  margin-block-start: 15px;
-  color: var(--jet);
-  font-weight: var(--fw-600);
-}
-
-.testi .client-title { font-size: var(--fs-14); }
-
-.testi .slider {
-  margin-inline: -16px;
-  padding-inline: 16px;
-  padding-block-end: 35px;
-}
-
-.testi .slider::-webkit-scrollbar { height: 12px; }
-
-.testi .slider::-webkit-scrollbar-track {
-  border: 1px solid var(--jet);
-  border-radius: var(--radius-pill);
-}
-
-.testi .slider::-webkit-scrollbar-thumb {
-  background-color: var(--jet);
-  border-radius: var(--radius-pill);
-}
-
-.testi .slider::-webkit-scrollbar-button { width: calc(25% - 20px); }
-
-
-
-
 
 /*-----------------------------------*\
   #MEDIA QUERIES
