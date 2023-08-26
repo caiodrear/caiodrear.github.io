@@ -414,18 +414,18 @@ gap: 4px;
 }
 
 .card.books {
-    padding: 8px;
+    padding: 0px;
+    border-radius: 0;
 }
 
-.card-content .rating-wrapper {
+.rating-wrapper {
     display: flex;
     gap: 5px;
-    color: var(--selective-yellow);
+    color: black;
   }
-  
-.card-content .rating-wrapper ion-icon { --ionicon-stroke-width: 45px; }
 
 .card-banner { border-radius: var(--radius-medium); }
+.card-banner.books { border-radius: 0; }
 
 .card-content {
     display: grid;
