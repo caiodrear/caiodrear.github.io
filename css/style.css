@@ -3,18 +3,18 @@
 \* -------------------------------------- */
 
 :root {
-    --background: hsl(293, 100%, 98%);
-    --on-background: hsl(264, 8%, 12%);
-    --surface: hsl(293, 100%, 98%);
-    --on-surface: hsl(264, 8%, 12%);
-    --on-surface-variant: hsl(264, 7%, 29%);
-    --surface-container-low: hsl(278, 44%, 96%);
-    --surface-container: hsl(276, 38%, 95%);
-    --surface-bright: hsl(293, 100%, 98%);
-    --primary: hsl(256, 34%, 48%);
+    --background: hsl(18, 100%, 98%);
+    --on-background: hsl(18, 8%, 12%);
+    --surface: hsl(18, 100%, 98%);
+    --on-surface: hsl(18, 8%, 12%);
+    --on-surface-variant: hsl(18, 7%, 29%);
+    --surface-container-low: hsl(18, 44%, 96%);
+    --surface-container: hsl(18, 38%, 95%);
+    --surface-bright: hsl(18, 100%, 98%);
+    --primary: hsl(18, 100%, 58%);
+    --outline: hsl(18, 4%, 47%);
+    --outline-variant: hsl(18, 10%, 79%);
     --on-primary: hsl(0, 0%, 100%);
-    --outline: hsl(270, 4%, 47%);
-    --outline-variant: hsl(270, 11%, 79%);
 
     --font-primary: 'Open Sans', sans-serif;
     --font-secondary: 'Noto Sans', sans-serif;
@@ -63,13 +63,34 @@
     }
 }
 
+.material-symbols-outlined.about {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
 .material-symbols-outlined.fill {
     font-variation-settings:
     'FILL' 1,
-    'wght' 400,
+    'wght' 200,
     'GRAD' 0,
-    'opsz' 48
+    'opsz' 24
   }
+
+.rating-wrapper {
+    display: flex;
+    color: var(--on-surface);
+}
 
 
 /* -------------------------------------- *\
@@ -426,12 +447,6 @@ gap: 4px;
     padding: 0px;
     border-radius: 0;
 }
-
-.rating-wrapper {
-    display: flex;
-    gap: 5px;
-    color: black;
-  }
 
 .card-banner { border-radius: var(--radius-medium); }
 .card-banner.books { border-radius: 0; }
