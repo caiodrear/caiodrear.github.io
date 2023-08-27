@@ -152,6 +152,10 @@ body {
     #TYPEOGRAPHY
 \* -------------------------------------- */
 
+.flag {
+    font-size: var(--headline-large);
+}
+
 .display-large { 
     font-family: var(--font-primary);
     font-size: var(--display-large);
@@ -431,7 +435,11 @@ gap: 4px;
 
 .project-list.books {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 12px;
+    gap: 60px;
+}
+
+.project-list.recipes {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
 .card {
@@ -454,6 +462,16 @@ gap: 4px;
 .card-content {
     display: grid;
     gap: 4px;
+}
+
+.card-content.books {
+    margin-top: 8px;
+}
+
+.card-content.recipe{
+    display: flex;
+    align-items: center; /* Vertically center items */
+    gap: 8px
 }
 
 .card-subtitle { color: var(--on-surface-variant); }
