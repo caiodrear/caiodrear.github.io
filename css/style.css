@@ -468,7 +468,7 @@ gap: 4px;
     margin-top: 8px;
 }
 
-.card-content.recipe{
+.card-content.recipe {
     display: flex;
     align-items: center; /* Vertically center items */
     gap: 8px
