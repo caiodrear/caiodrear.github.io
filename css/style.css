@@ -347,10 +347,15 @@ body {
     gap: 12px;
 }
 
+.bigger-icon {
+    font-size: 18px;
+    padding: 3px;
+}
+
 .list-item {
-display: flex;
-align-items: center;
-gap: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 /* -------------------------------------- *\
