@@ -1,274 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+  <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Caio</title>
-        <meta name="title" content="Caio">
-        <meta name="description" content="This is my personal website">
+      <title>Caio</title>
+      <meta name="title" content="Caio">
+      <meta name="description" content="This is my personal website">
 
-        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+      <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-        <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="./css/style.css">
     </head>
 
     <body>
-        <header class="topbar">
-            <a href="#" class="logo">
-                <img src="./favicon.svg" width="50" height="50" alt="logo">
-              </a>
-        </header>
+      <header class="topbar">
+        <a href="#" class="logo">
+        <img src="./favicon.svg" width="50" height="50" alt="logo">
+        </a>
+      </header>
 
-        <main>
-            <article>
-                <section class="section hero">
-                    <div class="container">
-                        <figure class="hero-banner img-holder" style="--width: 240; --height: 240;">
-                            <img src="./assets/images/profile.png" width="240" height="240" alt="Caio Rear " class="img-cover">
-                        </figure>
-
-                        <div class="hero-content">
-                            <span class="label-large section-subtitle">Data Scientist</span>
-                            <h1 class="display-small">Caio Rear</h1>
-                            <p class="body-large section-text">
-                                👋, Welcome to my website.
-
-                                Here, I keep a record of projects and, cheifly for my own reference,
-                                recipes I'm fond of and books I have been reading recently. 
-                            </p>
-
-                        </div>
-                    </div>
-                </section>
-
-                <div class="article">
-                    <div class="about-card">
-                        <h2 class="card-title title-medium">About</h2>
-                        <p class="body-medium card-text">
-                            I'm a Data Scientist based in London interested
-                            in cricket analytics and combinatorial geometry.
-                        </p>
-                        <ul class="about-list">
-                            <li class="list-item">
-                                <span class="material-symbols-outlined" aria-hidden="true"> location_on </span>
-                                <span class="label-medium">London, UK</span>
-                            </li>
-                            <li class="list-item">
-                                <span class="material-symbols-outlined" aria-hidden="true"> code_blocks </span>
-                                <a href="https://github.com/caiodrear" class="label-medium">https://github.com/caiodrear</a>
-                            </li>
-                            <li class="list-item">
-                                <span class="material-symbols-outlined" aria-hidden="true"> description </span>
-                                <a href="./assets/CV.pdf" class="label-medium" target=”_blank”>CV</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-
-                        <div class="primary-tabs">
-                            <button class="tab-btn active" data-tab-btn="projects">
-                                <span class="tab-text title-small">Projects</span>
-                                <div class="state-layer"></div>
-                            </button>
-                            <button class="tab-btn" data-tab-btn="books">
-                                <span class="tab-text title-small">Books</span>
-                                <div class="state-layer"></div>
-                            </button>
-                            <button class="tab-btn" data-tab-btn="recipes">
-                                <span class="tab-text title-small">Recipes</span>
-                                <div class="state-layer"></div>
-                            </button>
-                        </div>
-
-                        <section class="section tab-content active" data-tab-content="projects">
-                            <div class="container">
-                                <div class="project-list">
-
-                                    <div class="card">
-                                        <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                                            <img src="./assets/images/project-1.png" alt="Cricket Augur" width="334" height="180" class="img-cover">
-                                        </figure>
-                                        
-                                        <div class="card-content">
-
-                                            <span class="label-large">Web App</span>
-                                            <h3 class="title-large card-title">Cricket Augur</h3>
-                                        </div>
-                                        <a href="#" class="state-layer"></a>
-                                    </div>
-
-                                    <div class="card">
-                                        <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                                            <img src="./assets/images/project-2.png" alt="f-Vector Classification" width="334" height="180" class="img-cover">
-                                        </figure>
-                                        
-                                        <div class="card-content">
-
-                                            <span class="label-large">Mathematics</span>
-                                            <h3 class="title-large card-title">f-Vector Classification</h3>
-                                        </div>
-                                        <a href="#" class="state-layer"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="section tab-content books-tab" data-tab-content="books">
-                            <div class="container">
-                                <div class="project-list books">
-                                    <div>
-                                        <div class="card books">
-                                            <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                                                <img  src="./assets/images/quixote.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                                            </figure>
-
-                                            <a href="#" class="state-layer"></a>
-                                        </div>
-
-                                        <div class="card-content">
-                                            <span class="label-large">14/05/2023</span>
-                                            <h3 class="title-small card-title">Don Quixote</h3>
-                                            <div class="rating-wrapper">
-                                                <span class="material-symbols-outlined" aria-hidden="true"> star </span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div>
-                                        <div class="card books">
-                                            <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                                                <img  src="./assets/images/muqaddimah.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                                            </figure>
-
-                                            <a href="#" class="state-layer"></a>
-                                        </div>
-
-                                        <div class="card-content">
-                                            <span class="label-large">14/05/2023</span>
-                                            <h3 class="title-small card-title">Don Quixote</h3>
-                                            <div class="rating-wrapper">
-                                                <span class="material-symbols-outlined" aria-hidden="true"> star </span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div>
-                                        <div class="card books">
-                                            <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                                                <img  src="./assets/images/monkey.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                                            </figure>
-
-                                            <a href="#" class="state-layer"></a>
-                                        </div>
-
-                                        <div class="card-content">
-                                            <span class="label-large">14/05/2023</span>
-                                            <h3 class="title-small card-title">Don Quixote</h3>
-                                            <div class="rating-wrapper">
-                                                <span class="material-symbols-outlined" aria-hidden="true"> star </span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div>
-                                        <div class="card books">
-                                            <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                                                <img  src="./assets/images/travels.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                                            </figure>
-
-                                            <a href="#" class="state-layer"></a>
-                                        </div>
-
-                                        <div class="card-content">
-                                            <span class="label-large">14/05/2023</span>
-                                            <h3 class="title-small card-title">Don Quixote</h3>
-                                            <div class="rating-wrapper">
-                                                <span class="material-symbols-outlined" aria-hidden="true"> star </span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div>
-                                        <div class="card books">
-                                            <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                                                <img  src="./assets/images/dracula.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                                            </figure>
-
-                                            <a href="#" class="state-layer"></a>
-                                        </div>
-
-                                        <div class="card-content">
-                                            <span class="label-large">14/05/2023</span>
-                                            <h3 class="title-small card-title">Don Quixote</h3>
-                                            <div class="rating-wrapper">
-                                                <span class="material-symbols-outlined" aria-hidden="true"> star </span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </section>
-
-                        <section class="section tab-content recipes-tab" data-tab-content="recipes">
-                            <div class="container">
-                                <div class="project-list">
-
-                                    <div class="card">
-                                        <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                                            <img src="./assets/images/project-2.png" alt="Pixstock Media App" width="334" height="180" class="img-cover">
-                                        </figure>
-                                        
-                                        <div class="card-content">
-
-                                            <span class="label-large">Web App</span>
-                                            Stock
-                                            <h3 class="title-large card-title">some other thing</h3>
-                                        </div>
-                                        <a href="#" class="state-layer"></a>
-                                    </div>
-
-                                    <div class="card">
-                                        <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                                            <img src="./assets/images/project-2.png" alt="Pixstock Media App" width="334" height="180" class="img-cover">
-                                        </figure>
-                                        
-                                        <div class="card-content">
-
-                                            <span class="label-large">Web App</span>
-                                            Stock
-                                            <h3 class="title-large card-title">Pixstock - Stock Media App</h3>
-                                        </div>
-                                        <a href="#" class="state-layer"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                    </div>
-                </div>
-            </article>
-        </main>
-
-        <footer class="footer">
+      <main>
+        <article>
+          <section class="section hero">
             <div class="container">
-                <p class="body-medium">Caio</p>
-            </div>
-        </footer>
+              <figure class="hero-banner img-holder" style="--width: 240; --height: 240;">
+                <img src="./assets/images/profile.png" width="240" height="240" alt="Caio Rear " class="img-cover">
+              </figure>
 
-        <script src="./js/script.js"></script>
-    </body>
+              <div class="hero-content">
+                <span class="label-large section-subtitle">Data Scientist</span>
+                <h1 class="display-small">Caio Rear</h1>
+                <p class="body-large section-text">
+                  👋, Welcome to my website.
+
+                  Here, I keep a record of projects and, cheifly for my own reference,
+                  recipes I'm fond of and books I have been reading recently.
+                </p>
+
+              </div>
+            </div>
+          </section>
+
+          <div class="article">
+            <div class="about-card">
+              <h2 class="card-title title-medium">About</h2>
+              <p class="body-medium card-text">
+                I'm a Data Scientist based in London interested
+                in cricket analytics and combinatorial geometry.
+              </p>
+              <ul class="about-list">
+                <li class="list-item">
+                  <span class="material-symbols-outlined" aria-hidden="true"> location_on </span>
+                  <span class="label-medium">London, UK</span>
+                </li>
+                <li class="list-item">
+                  <span class="material-symbols-outlined" aria-hidden="true"> code_blocks </span>
+                  <a href="https://github.com/caiodrear" class="label-medium">https://github.com/caiodrear</a>
+                </li>
+                <li class="list-item">
+                  <span class="material-symbols-outlined" aria-hidden="true"> description </span>
+                  <a href="./assets/CV.pdf" class="label-medium" target=”_blank”>CV</a>
+                </li>
+              </ul>
+            </div>
+
+          <div>
+            <div class="primary-tabs">
+              <button class="tab-btn active" data-tab-btn="projects">
+                <span class="tab-text title-small">Projects</span>
+                <div class="state-layer"></div>
+              </button>
+              <button class="tab-btn" data-tab-btn="books">
+                <span class="tab-text title-small">Books</span>
+                <div class="state-layer"></div>
+              </button>
+              <button class="tab-btn" data-tab-btn="recipes">
+                <span class="tab-text title-small">Recipes</span>
+                <div class="state-layer"></div>
+              </button>
+            </div>
+
+            <section class="section tab-content active" data-tab-content="projects">
+              <div class="container">
+                <div class="project-list">
+
+                  <div class="card">
+                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                      <img src="./assets/images/project-1.png" alt="Cricket Augur" width="334" height="180" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+                      <span class="label-large">Web App</span>
+                      <h3 class="title-large card-title">Cricket Augur</h3>
+                    </div>
+
+                    <a href="#" class="state-layer"></a>
+
+                  </div>
+
+                  <div class="card">
+                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                      <img src="./assets/images/project-2.png" alt="f-Vector Classification" width="334" height="180" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+                      <span class="label-large">Mathematics</span>
+                      <h3 class="title-large card-title">f-Vector Classification</h3>
+                    </div>
+
+                    <a href="#" class="state-layer"></a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section tab-content books-tab" data-tab-content="books">
+              <div class="container">
+                <div class="project-list books">
+                  <div>
+                    <div class="card books">
+                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                        <img  src="./assets/images/muqaddimah.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
+                      </figure>
+
+                      <a href="https://www.goodreads.com/book/show/23528925" class="state-layer"></a>
+                    </div>
+
+                    <div class="card-content">
+                      <h3 class="title-large card-title">The Muqaddimah</h3>
+                      <span class="label-large">Currently Reading</span>
+                      <div class="title-large card-title">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="card books">
+                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                        <img  src="./assets/images/quixote.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
+                      </figure>
+
+                      <a href="https://www.goodreads.com/book/show/38088980" class="state-layer"></a>
+                    </div>
+
+                    <div class="card-content">
+                      <h3 class="title-large card-title">Don Quixote</h3>
+                      <span class="label-large">14/08/2023</span>
+                      <div class="title-large card-title">
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
+                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="card books">
+                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                        <img  src="./assets/images/nights.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
+                      </figure>
+
+                      <a href="https://www.goodreads.com/book/show/44639578" class="state-layer"></a>
+                    </div>
+
+                    <div class="card-content">
+                      <h3 class="title-large card-title">Tales from 1001 Nights</h3>
+                      <span class="label-large">11/05/2023</span>
+                      <div class="title-large card-title">
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="card books">
+                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                        <img  src="./assets/images/travels.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
+                      </figure>
+
+                      <a href="https://www.goodreads.com/book/show/132983768" class="state-layer"></a>
+                    </div>
+
+                    <div class="card-content">
+                      <h3 class="title-large card-title">The Travels</h3>
+                      <span class="label-large">24/03/2023</span>
+                      <div class="title-large card-title">
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="card books">
+                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                        <img  src="./assets/images/monkey.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
+                      </figure>
+
+                      <a href="https://www.goodreads.com/book/show/53403847" class="state-layer"></a>
+                    </div>
+
+                    <div class="card-content">
+                      <h3 class="title-large card-title">Monkey Kings</h3>
+                      <span class="label-large">18/02/2023</span>
+                      <div class="title-large card-title">
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="card books">
+                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                        <img  src="./assets/images/dracula.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
+                      </figure>
+
+                      <a href="https://www.goodreads.com/book/show/9786023" class="state-layer"></a>
+                    </div>
+
+                    <div class="card-content">
+                      <h3 class="title-large card-title">Dracula</h3>
+                      <span class="label-large">19/01/2023</span>
+                      <div class="title-large card-title">
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+            <section class="section tab-content recipes-tab" data-tab-content="recipes">
+              <div class="container">
+                <div class="project-list">
+
+                  <div class="card">
+                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                      <img src="./assets/images/project-1.png" alt="Cricket Augur" width="334" height="180" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+                      <span class="label-large">Web App</span>
+                      <h3 class="title-large card-title">Cricket Augur</h3>
+                    </div>
+
+                    <a href="#" class="state-layer"></a>
+
+                  </div>
+
+                  <div class="card">
+                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                      <img src="./assets/images/project-2.png" alt="f-Vector Classification" width="334" height="180" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+                      <span class="label-large">Mathematics</span>
+                      <h3 class="title-large card-title">f-Vector Classification</h3>
+                    </div>
+
+                    <a href="#" class="state-layer"></a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </article>
+      </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="body-medium">Caio</p>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>

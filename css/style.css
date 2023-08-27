@@ -63,6 +63,15 @@
     }
 }
 
+.material-symbols-outlined.fill {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+
 /* -------------------------------------- *\
     #RESET
 \* -------------------------------------- */
@@ -400,7 +409,7 @@ gap: 4px;
 }
 
 .project-list.books {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 12px;
 }
 
