@@ -377,9 +377,9 @@ body {
 
 /* :has(> .state-layer):hover .state-layer { opacity: 0.08; } */
 
-:has(> .state-layer):is(:focus, :focus-visible, :active) .state-layer {
+/* :has(> .state-layer):is(:focus, :focus-visible, :active) .state-layer {
     opacity: 0.12;
-}
+} */
 
 .primary-tabs {
     background-color: var(--background);
