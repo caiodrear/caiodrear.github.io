@@ -1,693 +1,707 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-      <title>Caio</title>
-      <meta name="title" content="Caio">
-      <meta name="description" content="This is my personal website">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <link rel="shortcut icon" href="./assets/favicons/favicon.svg" type="image/svg+xml">
+  <title>Caio</title>
+  <meta name="title" content="Caio">
+  <meta name="description" content="This is my personal website">
 
-      <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/favicon180.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicons/favicon120.png">
-      <link rel="apple-touch-icon" sizes="96x96" href="./assets/favicons/favicon96.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicons/favicon76.png">
+  <link rel="shortcut icon" href="./assets/favicons/favicon.svg" type="image/svg+xml">
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/favicon180.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicons/favicon120.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="./assets/favicons/favicon96.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicons/favicon76.png">
 
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Open+Sans:wght@400;500&display=swap"
+    rel="stylesheet">
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-      <link rel="stylesheet" href="./css/style.css">
-    </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <body>
-      <header class="topbar">
-        <a href="#" class="logo">
-        <img src="./assets/favicons/favicon.svg" width="50" height="50" alt="logo">
-        </a>
-      </header>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
 
-      <main>
-        <article>
-          <section class="section hero">
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">
+      <img src="./assets/favicons/favicon.svg" width="50" height="50" alt="logo">
+    </a>
+  </header>
+
+  <main>
+    <article>
+      <section class="section hero">
+        <div class="container">
+          <figure class="hero-banner img-holder" style="--width: 240; --height: 240;">
+            <img src="./assets/images/profile.png" width="240" height="240" alt="Caio Rear " class="img-cover">
+          </figure>
+
+          <div class="hero-content">
+            <span class="label-large section-subtitle">Data Scientist</span>
+            <h1 class="display-small">Caio Rear</h1>
+            <p class="body-large section-text">
+              👋, Welcome to my website.
+
+              Here, I keep a record of my projects and, chiefly for my own reference,
+              recipes I'm fond of and books I have been reading recently.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="article">
+        <div class="about-card">
+          <h2 class="card-title title-medium">About</h2>
+          <p class="body-medium card-text">
+            I'm a Data Scientist based in London interested
+            in combinatorial geometry and cricket analytics.
+          </p>
+          <ul class="about-list">
+            <li class="list-item">
+              <span class="material-symbols-outlined about" aria-hidden="true"> location_on </span>
+              <span class="label-medium">London, UK</span>
+            </li>
+            <li class="list-item">
+              <!-- <span class="material-symbols-outlined about" aria-hidden="true"> code_blocks </span> -->
+              <i class="fab fa-github bigger-icon" aria-hidden="true"></i>
+              <a href="https://github.com/caiodrear" class="label-medium" target=”_blank”>GitHub</a>
+            </li>
+            <li class="list-item">
+              <span class="material-symbols-outlined about" aria-hidden="true"> description </span>
+              <a href="./assets/docs/CV.pdf" class="label-medium" target=”_blank”>CV</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="primary-tabs">
+            <button class="tab-btn active" data-tab-btn="projects">
+              <span class="tab-text title-small">Projects</span>
+              <div class="state-layer"></div>
+            </button>
+            <button class="tab-btn" data-tab-btn="books">
+              <span class="tab-text title-small">Books</span>
+              <div class="state-layer"></div>
+            </button>
+            <button class="tab-btn" data-tab-btn="recipes">
+              <span class="tab-text title-small">Recipes</span>
+              <div class="state-layer"></div>
+            </button>
+          </div>
+
+          <section class="section tab-content active" data-tab-content="projects">
             <div class="container">
-              <figure class="hero-banner img-holder" style="--width: 240; --height: 240;">
-                <img src="./assets/images/profile.png" width="240" height="240" alt="Caio Rear " class="img-cover">
-              </figure>
+              <div class="project-list">
 
-              <div class="hero-content">
-                <span class="label-large section-subtitle">Data Scientist</span>
-                <h1 class="display-small">Caio Rear</h1>
-                <p class="body-large section-text">
-                  👋, Welcome to my website.
+                <div class="card">
+                  <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                    <img src="./assets/images/project-1.png" alt="Cricket Augur" width="334" height="180"
+                      class="img-cover">
+                  </figure>
 
-                  Here, I keep a record of my projects and, chiefly for my own reference,
-                  recipes I'm fond of and books I have been reading recently.
-                </p>
+                  <div class="card-content">
+                    <span class="label-large">Flask Web App</span>
+                    <h3 class="title-large card-title">Cricket Augur</h3>
+                  </div>
+
+                  <a href="https://cricketaugur.azurewebsites.net/" class="state-layer" target="_blank"></a>
+
+                </div>
+
+                <div class="card">
+                  <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                    <img src="./assets/images/project-2.png" alt="f-Vector Classification" width="334" height="180"
+                      class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+                    <span class="label-large">Mathematics</span>
+                    <h3 class="title-large card-title">f-Vector Classification</h3>
+                  </div>
+
+                  <a href="./assets/docs/Polytopes.pdf" class="state-layer" target=”_blank”></a>
+                </div>
+
+                <div class="card">
+                  <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                    <img src="./assets/images/project-3.png" alt="Gene" width="334" height="180" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+                    <span class="label-large">Machine Learning</span>
+                    <h3 class="title-large card-title">Gene</h3>
+                  </div>
+
+                  <a href="https://github.com/caiodrear/gene" class="state-layer" target="_blank"></a>
+                </div>
+
+                <div class="card">
+                  <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                    <img src="./assets/images/project-4.png" alt="Secretariat" width="334" height="180"
+                      class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+                    <span class="label-large">Flask Web App</span>
+                    <h3 class="title-large card-title">Secretariat</h3>
+                  </div>
+
+                  <a href="#" class="state-layer"></a>
+                </div>
+
+                <div class="card">
+                  <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                    <img src="./assets/images/project-5.png" alt="Gayle" width="334" height="180" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+                    <span class="label-large">Machine Learning</span>
+                    <h3 class="title-large card-title">Gayle</h3>
+                  </div>
+
+                  <a href="https://github.com/caiodrear/gayle" class="state-layer" target="_blank"></a>
+                </div>
+
+                <div class="card">
+                  <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                    <img src="./assets/images/project-6.png" alt="iSeMBard" width="334" height="180" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+                    <span class="label-large">Betting Strategy</span>
+                    <h3 class="title-large card-title">iSeMBard</h3>
+                  </div>
+
+                  <a href="#" class="state-layer"></a>
+                </div>
+
+                <div class="card">
+                  <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                    <img src="./assets/images/project-7.png" alt="Acca Insurance" width="334" height="180"
+                      class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+                    <span class="label-large">Matched Betting Tool</span>
+                    <h3 class="title-large card-title">Acca Insurance</h3>
+                  </div>
+
+                  <a href="https://github.com/caiodrear/acca_insurance" class="state-layer" target="_blank"></a>
+                </div>
 
               </div>
             </div>
           </section>
 
-          <div class="article">
-            <div class="about-card">
-              <h2 class="card-title title-medium">About</h2>
-              <p class="body-medium card-text">
-                I'm a Data Scientist based in London interested
-                in cricket analytics and combinatorial geometry.
-              </p>
-              <ul class="about-list">
-                <li class="list-item">
-                  <span class="material-symbols-outlined about" aria-hidden="true"> location_on </span>
-                  <span class="label-medium">London, UK</span>
-                </li>
-                <li class="list-item">
-                  <!-- <span class="material-symbols-outlined about" aria-hidden="true"> code_blocks </span> -->
-                  <i class="fab fa-github bigger-icon" aria-hidden="true"></i>
-                  <a href="https://github.com/caiodrear" class="label-medium" target=”_blank”>GitHub</a>
-                </li>
-                <li class="list-item">
-                  <span class="material-symbols-outlined about" aria-hidden="true"> description </span>
-                  <a href="./assets/docs/CV.pdf" class="label-medium" target=”_blank”>CV</a>
-                </li>
-              </ul>
+          <section class="section tab-content books-tab" data-tab-content="books">
+            <div class="container">
+              <div class="project-list books">
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder">
+                      <img src="./assets/images/books/orlando.png" class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/29847090" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">Orlando</h3>
+                    <span class="label-large">Currently Reading</span>
+                    <div class="rating-wrapper">
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder">
+                      <img src="./assets/images/books/cristo.png" class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/170577265" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">The Count of Monte Cristo</h3>
+                    <span class="label-large">21/06/2024</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill " aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder">
+                      <img src="./assets/images/books/crime.png" class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/38088979" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">Crime and Punishment</h3>
+                    <span class="label-large">03/03/2024</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill " aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder">
+                      <img src="./assets/images/books/carol.png" class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/49771964" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">A Christmas Carol</h3>
+                    <span class="label-large">30/12/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder">
+                      <img src="./assets/images/books/lenin.png" class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/823272" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">The State and Revolution</h3>
+                    <span class="label-large">23/12/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder">
+                      <img src="./assets/images/books/trembling.png" class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/24486946" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">Fear and Trembling</h3>
+                    <span class="label-large">9/12/23</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder">
+                      <img src="./assets/images/books/leagues.png" class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/25291348" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">Twenty Thousand Leagues Under the Sea</h3>
+                    <span class="label-large">29/11/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill " aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder">
+                      <img src="./assets/images/books/utopia.png" class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/52116277" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">Utopia</h3>
+                    <span class="label-large">16/10/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill " aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder">
+                      <img src="./assets/images/books/prince.png" class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/22571595" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">The Prince</h3>
+                    <span class="label-large">6/10/15</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                      <img src="./assets/images/books/muqaddimah.png" alt="Cricket Augur" width="129" height="180"
+                        class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/23528925" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">The Muqaddimah</h3>
+                    <span class="label-large">27/09/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined " aria-hidden="true"> star_rate_half </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                      <img src="./assets/images/books/quixote.png" alt="Cricket Augur" width="129" height="180"
+                        class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/38088980" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">Don Quixote</h3>
+                    <span class="label-large">14/08/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                      <img src="./assets/images/books/nights.png" alt="Cricket Augur" width="129" height="180"
+                        class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/44639578" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">Tales from 1001 Nights</h3>
+                    <span class="label-large">11/05/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                      <img src="./assets/images/books/travels.png" alt="Cricket Augur" width="129" height="180"
+                        class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/132983768" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">The Travels</h3>
+                    <span class="label-large">24/03/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                      <img src="./assets/images/books/monkey.png" alt="Cricket Augur" width="129" height="180"
+                        class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/53403847" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">Monkey King</h3>
+                    <span class="label-large">18/02/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card books">
+                    <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
+                      <img src="./assets/images/books/dracula.png" alt="Cricket Augur" width="129" height="180"
+                        class="img-cover">
+                    </figure>
+
+                    <a href="https://www.goodreads.com/book/show/9786023" class="state-layer" target=”_blank”></a>
+                  </div>
+
+                  <div class="card-content books">
+                    <h3 class="title-medium card-title">Dracula</h3>
+                    <span class="label-large">19/01/2023</span>
+                    <div class="rating-wrapper">
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                      <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
+          </section>
 
-          <div>
-            <div class="primary-tabs">
-              <button class="tab-btn active" data-tab-btn="projects">
-                <span class="tab-text title-small">Projects</span>
-                <div class="state-layer"></div>
-              </button>
-              <button class="tab-btn" data-tab-btn="books">
-                <span class="tab-text title-small">Books</span>
-                <div class="state-layer"></div>
-              </button>
-              <button class="tab-btn" data-tab-btn="recipes">
-                <span class="tab-text title-small">Recipes</span>
-                <div class="state-layer"></div>
-              </button>
+          <section class="section tab-content recipes-tab" data-tab-content="recipes">
+            <div class="container">
+              <div class="project-list recipes">
+
+                <div class="card">
+
+                  <div class="card-content recipe"
+                    ingredients="[onion, onion, ginger, tinned tomatoes, red chilli, double cream, fresh coriander]">
+                    <span class="flag">🇮🇳</span>
+                    <h3 class="title-large card-title">Black Dal</h3>
+
+                  </div>
+
+                  <a href="recipes/black_dal.txt" class="state-layer" target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇮🇳</span>
+                    <h3 class="title-large card-title">Mung Dal</h3>
+                  </div>
+
+                  <a href="recipes/mung_dal.txt" class="state-layer" target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇿🇦</span>
+                    <h3 class="title-large card-title">Bunny Chow</h3>
+                  </div>
+
+                  <a href="recipes/bunny_chow.txt" class="state-layer" target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇮🇳</span>
+                    <h3 class="title-large card-title">Rajma</h3>
+                  </div>
+
+                  <a href="#" class="state-layer" target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇹🇷</span>
+                    <h3 class="title-large card-title">Çılbır</h3>
+                  </div>
+
+                  <a href="#" class="state-layer" target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇮🇳</span>
+                    <h3 class="title-large card-title">Butter Chicken</h3>
+                  </div>
+
+                  <a href="https://seemapankhania.wordpress.com/2020/06/03/butter-chicken/" class="state-layer"
+                    target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇮🇹</span>
+                    <h3 class="title-large card-title">Fennel & Lemon Risotto</h3>
+                  </div>
+
+                  <a href="https://www.bbcgoodfood.com/recipes/fennel-lemon-risotto" class="state-layer"
+                    target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇨🇷</span>
+                    <h3 class="title-large card-title">Black Bean Soup</h3>
+                  </div>
+
+                  <a href="recipes/black_bean_soup.txt" class="state-layer" target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇪🇸</span>
+                    <h3 class="title-large card-title">Potato & Chorizo Stew</h3>
+                  </div>
+
+                  <a href="recipes/chorizo_potatoes_stew.txt" class="state-layer" target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇮🇳</span>
+                    <h3 class="title-large card-title">10-Minute Dal</h3>
+                  </div>
+
+                  <a href="https://seemapankhania.wordpress.com/2020/05/26/10-minute-dhal/" class="state-layer"
+                    target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇮🇹</span>
+                    <h3 class="title-large card-title">Broccoli & Gorgonzola Risotto</h3>
+                  </div>
+
+                  <a href="https://www.waitrose.com/home/recipes/recipe_directory/b/broccoli-and-bluecheeserisottowithtoastedpecans.html"
+                    class="state-layer" target=”_blank”></a>
+
+                </div>
+
+                <div class="card">
+
+                  <div class="card-content recipe">
+                    <span class="flag">🇪🇸</span>
+                    <h3 class="title-large card-title">Lentils Stew</h3>
+                  </div>
+
+                  <a href="https://www.thespanishchef.com/family-meals-under-1/lentils-stew" class="state-layer"
+                    target=”_blank”></a>
+
+                </div>
+
+              </div>
             </div>
+          </section>
 
-            <section class="section tab-content active" data-tab-content="projects">
-              <div class="container">
-                <div class="project-list">
+        </div>
+    </article>
+  </main>
 
-                  <div class="card">
-                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                      <img src="./assets/images/project-1.png" alt="Cricket Augur" width="334" height="180" class="img-cover">
-                    </figure>
+  <footer class="footer">
+    <div class="container">
+      <p class="body-medium"></p>
+    </div>
+  </footer>
 
-                    <div class="card-content">
-                      <span class="label-large">Flask Web App</span>
-                      <h3 class="title-large card-title">Cricket Augur</h3>
-                    </div>
+  <script src="./js/script.js"></script>
+</body>
 
-                    <a href="https://cricketaugur.azurewebsites.net/" class="state-layer" target="_blank"></a>
-
-                  </div>
-
-                  <div class="card">
-                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                      <img src="./assets/images/project-2.png" alt="f-Vector Classification" width="334" height="180" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-                      <span class="label-large">Mathematics</span>
-                      <h3 class="title-large card-title">f-Vector Classification</h3>
-                    </div>
-
-                    <a href="./assets/docs/Polytopes.pdf" class="state-layer" target=”_blank”></a>
-                  </div>
-
-                  <div class="card">
-                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                      <img src="./assets/images/project-3.png" alt="Gene" width="334" height="180" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-                      <span class="label-large">Machine Learning</span>
-                      <h3 class="title-large card-title">Gene</h3>
-                    </div>
-
-                    <a href="https://github.com/caiodrear/gene" class="state-layer" target="_blank"></a>
-                  </div>
-
-                  <div class="card">
-                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                      <img src="./assets/images/project-4.png" alt="Secretariat" width="334" height="180" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-                      <span class="label-large">Flask Web App</span>
-                      <h3 class="title-large card-title">Secretariat</h3>
-                    </div>
-
-                    <a href="#" class="state-layer"></a>
-                  </div>
-
-                  <div class="card">
-                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                      <img src="./assets/images/project-5.png" alt="Gayle" width="334" height="180" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-                      <span class="label-large">Machine Learning</span>
-                      <h3 class="title-large card-title">Gayle</h3>
-                    </div>
-
-                    <a href="https://github.com/caiodrear/gayle" class="state-layer" target="_blank"></a>
-                  </div>
-
-                  <div class="card">
-                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                      <img src="./assets/images/project-6.png" alt="iSeMBard" width="334" height="180" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-                      <span class="label-large">Betting Strategy</span>
-                      <h3 class="title-large card-title">iSeMBard</h3>
-                    </div>
-
-                    <a href="#" class="state-layer"></a>
-                  </div>
-
-                  <div class="card">
-                    <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
-                      <img src="./assets/images/project-7.png" alt="Acca Insurance" width="334" height="180" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-                      <span class="label-large">Matched Betting Tool</span>
-                      <h3 class="title-large card-title">Acca Insurance</h3>
-                    </div>
-
-                    <a href="https://github.com/caiodrear/acca_insurance" class="state-layer" target="_blank"></a>
-                  </div>
-
-                </div>
-              </div>
-            </section>
-
-            <section class="section tab-content books-tab" data-tab-content="books">
-              <div class="container">
-                <div class="project-list books">
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder">
-                        <img  src="./assets/images/books/orlando.png" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/29847090" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">Orlando</h3>
-                      <span class="label-large">Currently Reading</span>
-                      <div class="rating-wrapper">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder">
-                        <img  src="./assets/images/books/cristo.png" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/170577265" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">The Count of Monte Cristo</h3>
-                      <span class="label-large">21/06/2024</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill " aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder">
-                        <img  src="./assets/images/books/crime.png" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/38088979" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">Crime and Punishment</h3>
-                      <span class="label-large">03/03/2024</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill " aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder">
-                        <img  src="./assets/images/books/carol.png" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/49771964" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">A Christmas Carol</h3>
-                      <span class="label-large">30/12/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder">
-                        <img  src="./assets/images/books/lenin.png" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/823272" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">The State and Revolution</h3>
-                      <span class="label-large">23/12/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder">
-                        <img  src="./assets/images/books/trembling.png" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/24486946" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">Fear and Trembling</h3>
-                      <span class="label-large">9/12/23</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder">
-                        <img  src="./assets/images/books/leagues.png" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/25291348" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">Twenty Thousand Leagues Under the Sea</h3>
-                      <span class="label-large">29/11/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill " aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder">
-                        <img  src="./assets/images/books/utopia.png" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/52116277" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">Utopia</h3>
-                      <span class="label-large">16/10/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill " aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder">
-                        <img  src="./assets/images/books/prince.png" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/22571595" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">The Prince</h3>
-                      <span class="label-large">6/10/15</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                        <img  src="./assets/images/books/muqaddimah.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/23528925" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">The Muqaddimah</h3>
-                      <span class="label-large">27/09/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined " aria-hidden="true"> star_rate_half </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                        <img  src="./assets/images/books/quixote.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/38088980" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">Don Quixote</h3>
-                      <span class="label-large">14/08/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate_half </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                        <img  src="./assets/images/books/nights.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/44639578" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">Tales from 1001 Nights</h3>
-                      <span class="label-large">11/05/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                        <img  src="./assets/images/books/travels.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/132983768" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">The Travels</h3>
-                      <span class="label-large">24/03/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                        <img  src="./assets/images/books/monkey.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/53403847" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">Monkey King</h3>
-                      <span class="label-large">18/02/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card books">
-                      <figure class="card-banner books img-holder" style="--width: 129; --height: 180;">
-                        <img  src="./assets/images/books/dracula.png" alt="Cricket Augur" width="129" height="180" class="img-cover">
-                      </figure>
-
-                      <a href="https://www.goodreads.com/book/show/9786023" class="state-layer" target=”_blank”></a>
-                    </div>
-
-                    <div class="card-content books">
-                      <h3 class="title-medium card-title">Dracula</h3>
-                      <span class="label-large">19/01/2023</span>
-                      <div class="rating-wrapper">
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined fill" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                        <span class="material-symbols-outlined" aria-hidden="true"> star_rate </span>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </section>
-
-            <section class="section tab-content recipes-tab" data-tab-content="recipes">
-              <div class="container">
-                <div class="project-list recipes">
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇮🇳</span>
-                      <h3 class="title-large card-title">Black Dal</h3>
-                    </div>
-
-                    <a href="#" class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇮🇳</span>
-                      <h3 class="title-large card-title">Mung Dal</h3>
-                    </div>
-
-                    <a href="#" class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇿🇦</span>
-                      <h3 class="title-large card-title">Bunny Chow</h3>
-                    </div>
-
-                    <a href="https://www.bbc.co.uk/food/recipes/bunny_chow_38916"
-                      class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇮🇳</span>
-                      <h3 class="title-large card-title">Rajma</h3>
-                    </div>
-
-                    <a href="#" class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇹🇷</span>
-                      <h3 class="title-large card-title">Çılbır</h3>
-                    </div>
-
-                    <a href="#" class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇮🇳</span>
-                      <h3 class="title-large card-title">Butter Chicken</h3>
-                    </div>
-
-                    <a href="https://seemapankhania.wordpress.com/2020/06/03/butter-chicken/"
-                      class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇮🇹</span>
-                      <h3 class="title-large card-title">Fennel & Lemon Risotto</h3>
-                    </div>
-
-                    <a href="https://www.bbcgoodfood.com/recipes/fennel-lemon-risotto"
-                      class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇨🇷</span>
-                      <h3 class="title-large card-title">Black Bean Soup</h3>
-                    </div>
-
-                    <a href="https://www.youtube.com/watch?v=UrJOAURIM7w&ab_channel=JamieOliver"
-                      class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇪🇸</span>
-                      <h3 class="title-large card-title">Potato & Chorizo Stew</h3>
-                    </div>
-
-                    <a href="https://www.youtube.com/watch?v=i8p5UtV4GqY&ab_channel=JamieOliver"
-                      class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇮🇳</span>
-                      <h3 class="title-large card-title">10-Minute Dal</h3>
-                    </div>
-
-                    <a href="https://seemapankhania.wordpress.com/2020/05/26/10-minute-dhal/"
-                      class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇮🇹</span>
-                      <h3 class="title-large card-title">Broccoli & Gorgonzola Risotto</h3>
-                    </div>
-
-                    <a href="https://www.waitrose.com/home/recipes/recipe_directory/b/broccoli-and-bluecheeserisottowithtoastedpecans.html"
-                      class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                  <div class="card">
-
-                    <div class="card-content recipe">
-                      <span class="flag">🇪🇸</span>
-                      <h3 class="title-large card-title">Lentils Stew</h3>
-                    </div>
-
-                    <a href="https://www.thespanishchef.com/family-meals-under-1/lentils-stew"
-                      class="state-layer" target=”_blank”></a>
-
-                  </div>
-
-                </div>
-              </div>
-            </section>
-
-          </div>
-        </article>
-      </main>
-
-    <footer class="footer">
-      <div class="container">
-        <p class="body-medium"></p>
-      </div>
-    </footer>
-
-    <script src="./js/script.js"></script>
-  </body>
 </html>
