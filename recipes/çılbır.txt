@@ -1,0 +1,11 @@
+serves: 1
+-----------------------
+egg
+yoghurt: 4 tbsp
+garlic
+salt
+butter
+olive oil
+sumac
+dried chilli flakes
+dill
