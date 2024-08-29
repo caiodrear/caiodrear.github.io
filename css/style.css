@@ -59,33 +59,32 @@
         --motion-duration-short-1: 100ms;
 
         --motion-easing-linear: cubic-bezier(0, 0, 1, 1)
-
     }
 }
 
 .material-symbols-outlined.about {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-  }
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
 
 .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 200,
-    'GRAD' 0,
-    'opsz' 24
-  }
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 24
+}
 
 .material-symbols-outlined.fill {
     font-variation-settings:
-    'FILL' 1,
-    'wght' 200,
-    'GRAD' 0,
-    'opsz' 24
-  }
+        'FILL' 1,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 24
+}
 
 .rating-wrapper {
     display: flex;
@@ -105,21 +104,27 @@
     box-sizing: border-box;
 }
 
-li { list-style: none;}
+li {
+    list-style: none;
+}
 
 a,
 img,
 span,
 input,
 button,
-textarea {display: block;}
+textarea {
+    display: block;
+}
 
 a {
     color: inherit;
     text-decoration: none;
 }
 
-img { height: auto; }
+img {
+    height: auto;
+}
 
 input,
 button,
@@ -130,15 +135,21 @@ textarea {
 }
 
 input,
-textarea {width: 100%; }
+textarea {
+    width: 100%;
+}
 
-button { cursor: pointer; }
+button {
+    cursor: pointer;
+}
 
-textarea { resize: none; }
+textarea {
+    resize: none;
+}
 
 html {
     font-family: var(--font-secondary);
-    font-size:  var(--base-font-size);
+    font-size: var(--base-font-size);
     scroll-behavior: smooth;
 }
 
@@ -156,7 +167,7 @@ body {
     font-size: var(--headline-large);
 }
 
-.display-large { 
+.display-large {
     font-family: var(--font-primary);
     font-size: var(--display-large);
     font-weight: var(--weight-regular);
@@ -200,7 +211,7 @@ body {
 }
 
 .title-large {
-    font-family: var(--font-primary); 
+    font-family: var(--font-primary);
     font-size: var(--title-large);
     font-weight: var(--weight-regular);
     line-height: 28px;
@@ -280,17 +291,25 @@ body {
     align-items: center;
     padding-inline: 16px;
     z-index: 4;
-    }
+}
 
 /* -------------------------------------- *\
     #SECTION
 \* -------------------------------------- */
 
-.section {padding-block: var(--section-padding);}
-.container { padding-inline: 16px; }
+.section {
+    padding-block: var(--section-padding);
+}
+
+.container {
+    padding-inline: 16px;
+}
 
 .img-holder {
-    aspect-ratio: var(--width) / var(--height);
+    height: 210px;
+    /* Set a fixed height */
+    width: auto;
+    /* Width will adjust based on aspect ratio */
     background-color: transparent;
     overflow: hidden;
 }
@@ -298,10 +317,12 @@ body {
 .img-cover {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-.hero {padding-block-start: calc(var(--top-bar-height) + 24px) }
+.hero {
+    padding-block-start: calc(var(--top-bar-height) + 24px)
+}
 
 .hero .container {
     display: grid;
@@ -314,9 +335,13 @@ body {
     border-radius: var(--radius-circle);
 }
 
-.hero-content { max-width: 500px; }
+.hero-content {
+    max-width: 500px;
+}
 
-.hero.section-subtitle { color: var(--on-surface-variant); }
+.hero.section-subtitle {
+    color: var(--on-surface-variant);
+}
 
 .hero .section-text {
     margin-block: 5px;
@@ -330,11 +355,14 @@ body {
 .about-card {
     background-color: var(--surface-container-low);
     color: var(--on-surface-variant);
-    margin-inline: 16px; padding: 16px;
+    margin-inline: 16px;
+    padding: 16px;
     border-radius: var(--radius-large);
 }
 
-.about-card .card-title { color: var(--on-surface); }
+.about-card .card-title {
+    color: var(--on-surface);
+}
 
 .about-card .card-text {
     margin-block: 12px;
@@ -363,7 +391,8 @@ body {
 \* -------------------------------------- */
 
 :has(> .state-layer) {
-    position: relative; overflow: hidden;
+    position: relative;
+    overflow: hidden;
     z-index: 1;
 }
 
@@ -376,7 +405,9 @@ body {
 }
 
 @media (hover: hover) {
-    :has(> .state-layer):hover .state-layer {opacity: 0.08;}
+    :has(> .state-layer):hover .state-layer {
+        opacity: 0.08;
+    }
 }
 
 :has(> .state-layer):is(:focus, :focus-visible, :active) .state-layer {
@@ -388,7 +419,7 @@ body {
     margin-block-start: 24px;
     margin-inline: 16px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     border-block-end: 1px solid var(--outline-variant);
 }
@@ -426,9 +457,13 @@ body {
     opacity: 0;
 }
 
-.tab-btn.active .tab-text::after { opacity: 1; }
+.tab-btn.active .tab-text::after {
+    opacity: 1;
+}
 
-.tab-content:not(.active) { display: none; }
+.tab-content:not(.active) {
+    display: none;
+}
 
 /* -------------------------------------- *\
     #PROJECTS
@@ -441,11 +476,16 @@ body {
 }
 
 .project-list.books {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
     gap: 60px;
+    justify-content: center;
 }
 
 .project-list.recipes {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.project-list.art {
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
@@ -463,8 +503,13 @@ body {
     border-radius: 0;
 }
 
-.card-banner { border-radius: var(--radius-medium); }
-.card-banner.books { border-radius: 0; }
+.card-banner {
+    border-radius: var(--radius-medium);
+}
+
+.card-banner.books {
+    border-radius: 0;
+}
 
 .card-content {
     display: grid;
@@ -477,12 +522,18 @@ body {
 
 .card-content.recipe {
     display: flex;
-    align-items: center; /* Vertically center items */
+    align-items: center;
+    /* Vertically center items */
     gap: 8px
 }
 
-.card-subtitle { color: var(--on-surface-variant); }
-.card-title { color: var(--on-surface); }
+.card-subtitle {
+    color: var(--on-surface-variant);
+}
+
+.card-title {
+    color: var(--on-surface);
+}
 
 /* -------------------------------------- *\
     #FOOTER
@@ -509,24 +560,32 @@ body {
         align-items: flex-start;
     }
 
-    .about-card, .primary-tabs {
-        position: sticky; top: 64px;
+    .about-card,
+    .primary-tabs {
+        position: sticky;
+        top: 64px;
     }
 
-    .primary-tabs { z-index: 2; }
+    .primary-tabs {
+        z-index: 2;
+    }
 
-    .hero .container { grid-template-columns: 0.2fr 1fr; }
+    .hero .container {
+        grid-template-columns: 0.2fr 1fr;
+    }
 }
 
 @media (min-width: 1200px) {
 
     .container,
-    .article{
+    .article {
         max-width: 1128px;
         margin-inline: auto;
     }
 
-    .about-card { margin-inline: 8px}
+    .about-card {
+        margin-inline: 8px
+    }
 
     .contact-tab .container {
         display: grid;
