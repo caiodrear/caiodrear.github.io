@@ -306,10 +306,15 @@ body {
 }
 
 .img-holder {
+    aspect-ratio: var(--width) / var(--height);
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.img-holder.books {
     height: 210px;
-    /* Set a fixed height */
     width: auto;
-    /* Width will adjust based on aspect ratio */
+    justify-self: center;
     background-color: transparent;
     overflow: hidden;
 }
@@ -317,7 +322,12 @@ body {
 .img-cover {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+.img-cover.books {
     object-fit: contain;
+    width: auto;
 }
 
 .hero {
@@ -476,7 +486,7 @@ body {
 }
 
 .project-list.books {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 60px;
     justify-content: center;
 }
@@ -501,6 +511,7 @@ body {
 .card.books {
     padding: 0px;
     border-radius: 0;
+    background-color: transparent;
 }
 
 .card-banner {
@@ -518,6 +529,7 @@ body {
 
 .card-content.books {
     margin-top: 8px;
+    justify-content: center;
 }
 
 .card-content.recipe {
