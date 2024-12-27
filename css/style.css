@@ -3,17 +3,18 @@
 \* -------------------------------------- */
 
 :root {
-    --background: hsl(18, 100%, 98%);
-    --on-background: hsl(18, 8%, 12%);
-    --surface: hsl(18, 100%, 98%);
-    --on-surface: hsl(18, 8%, 12%);
-    --on-surface-variant: hsl(18, 7%, 29%);
-    --surface-container-low: hsl(18, 44%, 96%);
-    --surface-container: hsl(18, 38%, 95%);
-    --surface-bright: hsl(18, 100%, 98%);
-    --primary: hsl(18, 100%, 58%);
-    --outline: hsl(18, 4%, 47%);
-    --outline-variant: hsl(18, 10%, 79%);
+    --background: hsl(51, 100%, 98%);
+    --on-background: hsl(51, 8%, 12%);
+    --profile-bg: hsl(48, 21%, 73%);
+    --surface: hsl(51, 100%, 98%);
+    --on-surface: hsl(51, 8%, 12%);
+    --on-surface-variant: hsl(51, 7%, 29%);
+    --surface-container-low: hsl(51, 44%, 96%);
+    --surface-container: hsl(51, 38%, 95%);
+    --surface-bright: hsl(51, 100%, 98%);
+    --primary: hsl(51, 100%, 18%);
+    --outline: hsl(51, 4%, 47%);
+    --outline-variant: hsl(51, 10%, 79%);
     --on-primary: hsl(0, 0%, 100%);
 
     --font-primary: 'Open Sans', sans-serif;
@@ -49,7 +50,7 @@
     --elevation-1: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004d;
 
     --section-padding: 24px;
-    --top-bar-height: 64px;
+    --top-bar-height: 72px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -282,7 +283,7 @@ body {
 .topbar {
     background-color: var(--background);
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 100%;
     height: var(--top-bar-height);
@@ -323,6 +324,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: var(--profile-bg);
 }
 
 .img-cover.books {
