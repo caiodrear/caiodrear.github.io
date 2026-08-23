@@ -377,7 +377,8 @@ body {
     font-weight: var(--weight-bold);
     line-height: 0.85;
     color: var(--accent);
-    padding-inline-end: 4px;
+    padding-inline-end: 0;
+    margin-inline-end: -1px;
     padding-block-start: 0;
 }
 
@@ -994,8 +995,8 @@ body {
     /* narrower measure makes the same gap read wider against a shorter line */
     .drop-cap::first-letter {
         font-size: 3.4rem;
-        padding-inline-end: 1px;
-        margin-inline-start: -1px;
+        padding-inline-end: 0;
+        margin-inline: -1px -2px;
     }
 
     .recipe-sheet {
