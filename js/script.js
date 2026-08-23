@@ -30,35 +30,48 @@ $tabBtn.forEach(item => {
 /* -------------------------------------- *\
     #BOOKS
 
-    /assets/books.json, in shelf order. A book being read carries "reading"
-    in place of a date and rating:
+    /assets/books.json, in shelf order. Every link is Goodreads, so only the
+    id is stored. Ratings go in halves. A book with no "read" date is still
+    being read, and is shown with no stars at all:
 
         { "title": "Culture and Anarchy", "cover": "culture.png",
-          "url": "https://...", "read": "24/8/2026", "rating": 1 }
+          "goodreads": 12612203, "read": "24/8/2026", "rating": 1 }
+
+        { "title": "Far from the Madding Crowd", "cover": "madding.png",
+          "goodreads": 25310599, "read": "23/6/2026", "rating": 3.5 }
 
         { "title": "Wilhelm Meister's Apprenticeship", "cover": "meister.png",
-          "url": "https://...", "reading": true }
+          "goodreads": 31566320 }
 \* -------------------------------------- */
 
 const BOOKS_FILE = "./assets/books.json";
 const BOOK_COVERS = "./assets/images/books/";
+const BOOK_URL = "https://www.goodreads.com/book/show/";
 const MAX_RATING = 5;
 
 /**
- * @param {number} rating
+ * Five icons: filled up to the rating, one half where the rating lands on a
+ * half, the rest empty.
+ *
+ * @param {number} rating in halves, 0 to MAX_RATING
  * @returns {HTMLElement}
  */
 const ratingStars = function (rating) {
     const wrapper = document.createElement("div");
     wrapper.className = "rating-wrapper";
+    wrapper.setAttribute("aria-label", `${rating} out of ${MAX_RATING}`);
 
     for (let star = 1; star <= MAX_RATING; star++) {
         const icon = document.createElement("span");
+        const half = star - 0.5 === rating;
+
         icon.className = star <= rating
             ? "material-symbols-outlined fill"
-            : "material-symbols-outlined";
+            : half
+                ? "material-symbols-outlined half"
+                : "material-symbols-outlined";
         icon.setAttribute("aria-hidden", "true");
-        icon.textContent = "star_rate";
+        icon.textContent = half ? "star_rate_half" : "star_rate";
         wrapper.append(icon);
     }
 
@@ -89,7 +102,7 @@ const bookCard = function (book) {
 
     const link = document.createElement("a");
     link.className = "state-layer";
-    link.href = book.url;
+    link.href = BOOK_URL + book.goodreads;
     link.target = "_blank";
     link.rel = "noopener";
     figure.append(link);
@@ -104,11 +117,14 @@ const bookCard = function (book) {
     content.append(title);
 
     const label = document.createElement("span");
-    label.className = book.reading ? "label-large reading" : "label-large";
-    label.textContent = book.reading ? "Currently Reading" : book.read;
+    label.className = book.read ? "label-large" : "label-large reading";
+    label.textContent = book.read ?? "Currently Reading";
     content.append(label);
 
-    content.append(ratingStars(book.reading ? 0 : book.rating ?? 0));
+    // a book still being read has no stars, not five empty ones
+    if (typeof book.rating === "number") {
+        content.append(ratingStars(book.rating));
+    }
 
     return item;
 };

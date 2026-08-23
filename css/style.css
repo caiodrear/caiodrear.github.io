@@ -713,7 +713,8 @@ body {
     color: var(--outline-variant);
 }
 
-.card-content.books .rating-wrapper .material-symbols-outlined.fill {
+.card-content.books .rating-wrapper .material-symbols-outlined.fill,
+.card-content.books .rating-wrapper .material-symbols-outlined.half {
     color: var(--accent);
 }
 
