@@ -1,25 +1,29 @@
 {
   "serves": 4,
   "ingredients": {
-    "extra virgin olive oil": "100ml",
-    "onion, thinly sliced": "1x",
-    "celery, in chunks": "2 stalks",
-    "carrots, in chunks": "3x",
-    "garlic, thinly sliced": "1 head",
-    "green pepper, large dice": "1 small",
-    "smoked paprika": "1/2 tbsp",
-    "cumin": "1 tsp",
-    "bay leaves": "2x",
-    "tinned tomatoes": "1 tin",
-    "vinegar": "3 tbsp",
-    "potatoes, in large chunks": "2x",
-    "lentils": "300g",
-    "dried oregano": "1 pinch",
-    "parsley, coarsely chopped": "25g",
-    "vegetable stock cube": "1x",
-    "water": "2 litres",
-    "salt": "",
-    "pepper": ""
+    "fresh": {
+      "onion, thinly sliced": "1x",
+      "celery, in chunks": "2 stalks",
+      "carrots, in chunks": "3x",
+      "garlic, thinly sliced": "1 head",
+      "green pepper, large dice": "1 small",
+      "potatoes, in large chunks": "2x",
+      "parsley, coarsely chopped": "25g"
+    },
+    "cupboard": {
+      "lentils": "300g",
+      "extra virgin olive oil": "100ml",
+      "tinned tomatoes": "1 tin",
+      "vegetable stock cube": "1x",
+      "vinegar": "3 tbsp",
+      "smoked paprika": "1/2 tbsp",
+      "cumin": "1 tsp",
+      "bay leaves": "2x",
+      "dried oregano": "1 pinch",
+      "water": "2 litres",
+      "salt": "",
+      "pepper": ""
+    }
   },
   "method": [
     "Place a large pot over high heat with the olive oil, onion, celery, carrots, green pepper and garlic. Fry for 20 minutes, until properly caramelised.",

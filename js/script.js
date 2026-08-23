@@ -229,19 +229,25 @@ const buildList = async function (selector, file, build, failure) {
 
     The body of each recipe sits in its own file under /assets/recipes/, and is
     only read when its sheet is opened. Name and flag are not repeated there, so
-    there is one place to rename a recipe.
+    there is one place to rename a recipe. A recipe taken from elsewhere carries
+    a "source", which the foot of the sheet credits.
 
         {
           "serves": 4,
-          "ingredients": { "lentils": "300g", "salt": "" },
+          "ingredients": {
+            "fresh":    { "onion": "1x", "parsley": "25g" },
+            "cupboard": { "lentils": "300g", "salt": "" }
+          },
           "method": ["Place a large pot...", "Add the bay leaves..."]
         }
 
-    Ingredient groups that need their own heading use "sections" instead:
+    The two shopping columns are drawn side by side, in the order written, and
+    either may be left out. Ingredient groups that need their own heading use
+    "sections" instead:
 
         "sections": [
-          { "title": "marinade", "ingredients": { ... } },
-          { "title": "gravy",    "ingredients": { ... } }
+          { "title": "marinade", "ingredients": { "fresh": { ... }, ... } },
+          { "title": "gravy",    "ingredients": { "fresh": { ... }, ... } }
         ]
 \* -------------------------------------- */
 
@@ -266,6 +272,9 @@ const loadBody = function (file) {
     return bodies.get(file);
 };
 
+/** the shopping columns, in the order they are drawn */
+const COLUMNS = ["fresh", "cupboard"];
+
 /**
  * Flattens either ingredient shape into one list of headed groups.
  *
@@ -281,6 +290,43 @@ const ingredientGroups = function (recipe) {
     }
 
     return recipe.ingredients ? [{ title: null, ingredients: recipe.ingredients }] : [];
+};
+
+/**
+ * One column of the shopping list. A column with nothing in it is not drawn at
+ * all, and a lone column then fills the width.
+ *
+ * @param {string} title fresh or cupboard
+ * @param {object} ingredients name to quantity, quantity may be empty
+ * @returns {HTMLElement|null}
+ */
+const ingredientColumn = function (title, ingredients) {
+    const entries = Object.entries(ingredients ?? {});
+    if (!entries.length) return null;
+
+    const column = document.createElement("div");
+    column.className = "ingredient-column";
+
+    const heading = document.createElement("h4");
+    heading.className = "ingredient-column-title";
+    heading.textContent = title;
+    column.append(heading);
+
+    const list = document.createElement("div");
+    list.className = "ingredient-list";
+    column.append(list);
+
+    entries.forEach(([name, qty]) => {
+        const row = document.createElement("div");
+        row.className = "ingredient";
+        row.innerHTML =
+            `<span class="name"></span><span class="leader"></span><span class="qty"></span>`;
+        row.querySelector(".name").textContent = name;
+        row.querySelector(".qty").textContent = qty || "—";
+        list.append(row);
+    });
+
+    return column;
 };
 
 const $sheet = document.querySelector("[data-recipe-sheet]");
@@ -342,20 +388,15 @@ const openRecipe = async function (entry) {
             $sheetBody.append(heading);
         }
 
-        const list = document.createElement("div");
-        list.className = "ingredient-list";
+        const columns = document.createElement("div");
+        columns.className = "ingredient-columns";
 
-        Object.entries(group.ingredients).forEach(([name, qty]) => {
-            const row = document.createElement("div");
-            row.className = "ingredient";
-            row.innerHTML =
-                `<span class="name"></span><span class="leader"></span><span class="qty"></span>`;
-            row.querySelector(".name").textContent = name;
-            row.querySelector(".qty").textContent = qty || "—";
-            list.append(row);
+        COLUMNS.forEach(name => {
+            const column = ingredientColumn(name, group.ingredients[name]);
+            if (column) columns.append(column);
         });
 
-        $sheetBody.append(list);
+        $sheetBody.append(columns);
     });
 
     if (Array.isArray(recipe.method) && recipe.method.length) {
@@ -376,6 +417,17 @@ const openRecipe = async function (entry) {
 
     const foot = document.createElement("footer");
     foot.className = "recipe-foot";
+
+    // a recipe that is not mine says whose it is
+    if (recipe.source) {
+        const source = document.createElement("a");
+        source.href = recipe.source;
+        source.target = "_blank";
+        source.rel = "noopener";
+        source.textContent = "source";
+        foot.append(source);
+    }
+
     const raw = document.createElement("a");
     raw.href = RECIPE_DIR + entry.file;
     raw.target = "_blank";

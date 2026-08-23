@@ -32,7 +32,7 @@
   {
     "name": "Fennel & Lemon Risotto",
     "flag": "🇮🇹",
-    "url": "https://www.bbcgoodfood.com/recipes/fennel-lemon-risotto"
+    "file": "fennel-lemon-risotto.json"
   },
   {
     "name": "Black Bean Soup",
@@ -47,12 +47,12 @@
   {
     "name": "10-Minute Dal",
     "flag": "🇮🇳",
-    "url": "https://seemapankhania.wordpress.com/2020/05/26/10-minute-dhal/"
+    "file": "10-minute-dal.json"
   },
   {
     "name": "Broccoli & Gorgonzola Risotto",
     "flag": "🇮🇹",
-    "url": "https://www.waitrose.com/home/recipes/recipe_directory/b/broccoli-and-bluecheeserisottowithtoastedpecans.html"
+    "file": "broccoli-gorgonzola-risotto.json"
   },
   {
     "name": "Lentils Stew",

@@ -1,15 +1,19 @@
 {
   "serves": 3,
   "ingredients": {
-    "chorizo ring": "",
-    "potato": "",
-    "red pepper": "2x",
-    "white onion": "2x",
-    "dried chilli": "",
-    "red wine vinegar": "",
-    "tomato": "2x",
-    "sweet paprika": "1 tsp",
-    "bay leaf": "",
-    "garlic": "2x"
+    "fresh": {
+      "chorizo ring": "",
+      "potato": "",
+      "red pepper": "2x",
+      "white onion": "2x",
+      "tomato": "2x",
+      "garlic": "2x"
+    },
+    "cupboard": {
+      "dried chilli": "",
+      "red wine vinegar": "",
+      "sweet paprika": "1 tsp",
+      "bay leaf": ""
+    }
   }
 }

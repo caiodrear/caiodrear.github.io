@@ -819,7 +819,7 @@ body {
     position: fixed;
     inset: 0;
     margin: auto;
-    width: min(560px, calc(100vw - 32px));
+    width: min(760px, calc(100vw - 32px));
     max-height: min(84dvh, 860px);
     padding: 0;
     border: 1px solid var(--rule-strong);
@@ -906,6 +906,32 @@ body {
 
 .recipe-section-title:first-child {
     margin-block-start: 0;
+}
+
+/* fresh beside cupboard. grid-auto-flow keeps a lone column at full width,
+   which is what a recipe with only one of the two should look like. */
+.ingredient-columns {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: 40px;
+    align-items: start;
+}
+
+/* the rule is pulled back into the middle of the gap, half on each side */
+.ingredient-column + .ingredient-column {
+    border-inline-start: 1px solid var(--outline-variant);
+    padding-inline-start: 20px;
+    margin-inline-start: -20px;
+}
+
+.ingredient-column-title {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    color: var(--outline);
+    margin-block-end: 6px;
 }
 
 .ingredient-list {
@@ -1056,6 +1082,24 @@ body {
 
     .hero {
         padding-block-start: calc(var(--top-bar-height) + 22px);
+    }
+}
+
+/* two columns of leaders stop reading below roughly 280px each, so from here
+   the shopping list stacks, fresh above cupboard */
+@media (max-width: 639px) {
+
+    .ingredient-columns {
+        grid-auto-flow: row;
+        row-gap: 18px;
+    }
+
+    .ingredient-column + .ingredient-column {
+        padding-inline-start: 0;
+        margin-inline-start: 0;
+        border-inline-start: none;
+        padding-block-start: 16px;
+        border-block-start: 1px solid var(--outline-variant);
     }
 }
 

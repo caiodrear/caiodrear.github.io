@@ -4,40 +4,48 @@
     {
       "title": "marinade",
       "ingredients": {
-        "chicken thighs": "500g",
-        "yoghurt": "110g",
-        "garlic": "2x",
-        "ginger": "",
-        "green chilli": "",
-        "garam masala": "1/2 tsp",
-        "cumin": "1/2 tsp",
-        "chilli powder": "1/2 tsp",
-        "turmeric": "1/4 tsp",
-        "salt": "1/2 tsp",
-        "lemon juice": "1 tsp"
+        "fresh": {
+          "chicken thighs": "500g",
+          "yoghurt": "110g",
+          "garlic": "2x",
+          "ginger": "",
+          "green chilli": "",
+          "lemon juice": "1 tsp"
+        },
+        "cupboard": {
+          "garam masala": "1/2 tsp",
+          "cumin": "1/2 tsp",
+          "chilli powder": "1/2 tsp",
+          "turmeric": "1/4 tsp",
+          "salt": "1/2 tsp"
+        }
       }
     },
     {
       "title": "gravy",
       "ingredients": {
-        "ghee": "3 tbsp",
-        "onion": "",
-        "star anise": "",
-        "cinnamon stick": "",
-        "cloves": "4",
-        "cumin seeds": "1/2 tsp",
-        "garlic": "2x",
-        "ginger": "",
-        "cumin": "1 tsp",
-        "coriander": "1 tsp",
-        "garam masala": "1 tsp",
-        "chilli powder": "1 tsp",
-        "salt": "2 tsp",
-        "tomato puree": "1 tbsp",
-        "tinned tomatoes": "",
-        "dried fenugreek leaves": "2 tbsp",
-        "double cream": "80ml",
-        "fresh coriander": ""
+        "fresh": {
+          "onion": "",
+          "garlic": "2x",
+          "ginger": "",
+          "double cream": "80ml",
+          "fresh coriander": ""
+        },
+        "cupboard": {
+          "ghee": "3 tbsp",
+          "tinned tomatoes": "",
+          "tomato puree": "1 tbsp",
+          "star anise": "",
+          "cinnamon stick": "",
+          "cloves": "4",
+          "cumin seeds": "1/2 tsp",
+          "cumin": "1 tsp",
+          "coriander": "1 tsp",
+          "garam masala": "1 tsp",
+          "chilli powder": "1 tsp",
+          "dried fenugreek leaves": "2 tbsp",
+          "salt": "2 tsp"
+        }
       }
     }
   ]

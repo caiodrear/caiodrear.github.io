@@ -1,23 +1,27 @@
 {
   "serves": 4,
   "ingredients": {
-    "cumin seeds": "1/2 tsp",
-    "fennel seeds": "1/2 tsp",
-    "cinnamon stick": "1in",
-    "green cardamom pods": "2x",
-    "star anise": "",
-    "bay leaf": "",
-    "white onion": "",
-    "curry powder": "6 tsp",
-    "tomato": "2x",
-    "kidey beans": "120g",
-    "ginger": "",
-    "garlic": "2x",
-    "curry leaves": "12x",
-    "potato": "2x",
-    "salt": "2 tsp",
-    "fresh coriander": "",
-    "lime": "",
-    "bread": ""
+    "fresh": {
+      "white onion": "",
+      "tomato": "2x",
+      "potato": "2x",
+      "garlic": "2x",
+      "ginger": "",
+      "curry leaves": "12x",
+      "fresh coriander": "",
+      "lime": "",
+      "bread": ""
+    },
+    "cupboard": {
+      "kidey beans": "120g",
+      "curry powder": "6 tsp",
+      "cumin seeds": "1/2 tsp",
+      "fennel seeds": "1/2 tsp",
+      "cinnamon stick": "1in",
+      "green cardamom pods": "2x",
+      "star anise": "",
+      "bay leaf": "",
+      "salt": "2 tsp"
+    }
   }
 }

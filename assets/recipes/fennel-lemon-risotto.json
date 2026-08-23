@@ -1,0 +1,26 @@
+{
+  "serves": 2,
+  "source": "https://www.bbcgoodfood.com/recipes/fennel-lemon-risotto",
+  "ingredients": {
+    "fresh": {
+      "fennel bulb, base trimmed": "1 large",
+      "onion, finely chopped": "1x",
+      "garlic, finely chopped": "1 clove",
+      "lemon, zested": "1x",
+      "butter": "1 tbsp, plus a knob",
+      "parmesan, grated": "25g",
+      "cooked peeled prawns": "1 handful"
+    },
+    "cupboard": {
+      "risotto rice": "140g",
+      "white wine": "175ml",
+      "hot vegetable stock": "550ml"
+    }
+  },
+  "method": [
+    "Chop any green leafy fennel fronds and set aside. Cut off the stalk-like fennel top, remove the outer layers and finely chop both. Heat 1 tbsp butter in a frying pan and cook the onion, garlic and chopped fennel until soft but not coloured.",
+    "Add the rice and stir for 1 min. Pour over most of the wine and simmer until evaporated. Add 500ml of the hot stock, a ladleful at a time, stirring between each addition until it is absorbed.",
+    "Meanwhile, slice the remaining fennel and fry in a knob of butter until browned. Add the remaining stock and wine and cook until tender.",
+    "When the rice is cooked, stir in the zest, parmesan and some seasoning. Take off the heat and set aside, covered, for 2 mins. Serve in bowls, topped with the fennel fronds and cooked fennel, stirring the prawns through if using."
+  ]
+}
