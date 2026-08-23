@@ -1,0 +1,27 @@
+[
+  "black-dal.json",
+  "mung-dal.json",
+  "bunny-chow.json",
+  "rajma.json",
+  "cilbir.json",
+  "butter-chicken.json",
+  {
+    "name": "Fennel & Lemon Risotto",
+    "flag": "🇮🇹",
+    "url": "https://www.bbcgoodfood.com/recipes/fennel-lemon-risotto"
+  },
+  "black-bean-soup.json",
+  "chorizo-potatoes-stew.json",
+  {
+    "name": "10-Minute Dal",
+    "flag": "🇮🇳",
+    "url": "https://seemapankhania.wordpress.com/2020/05/26/10-minute-dhal/"
+  },
+  {
+    "name": "Broccoli & Gorgonzola Risotto",
+    "flag": "🇮🇹",
+    "url": "https://www.waitrose.com/home/recipes/recipe_directory/b/broccoli-and-bluecheeserisottowithtoastedpecans.html"
+  },
+  "lentils-stew.json",
+  "gujarati-dal.json"
+]
