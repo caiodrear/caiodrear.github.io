@@ -6,8 +6,8 @@
 "use strict";
 
 const /** {NodeList} */ $tabBtn = document.querySelectorAll("[data-tab-btn]");
-let /** {NodeElement} */[lastActiveTab] = document.querySelectorAll("[data-tab-content]");
-let /** {NodeElement} */[lastActiveTabBtn] = $tabBtn;
+let /** {NodeElement} */ lastActiveTab = document.querySelector("[data-tab-content].active");
+let /** {NodeElement} */ lastActiveTabBtn = document.querySelector("[data-tab-btn].active");
 
 $tabBtn.forEach(item => {
     item.addEventListener("click", function () {
