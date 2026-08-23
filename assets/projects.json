@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Cricket Augur",
+    "category": "Flask Web App",
+    "image": "project-1.png",
+    "url": "https://cricketaugur.azurewebsites.net/"
+  },
+  {
+    "title": "f-Vector Classification",
+    "category": "Mathematics",
+    "image": "project-2.png",
+    "url": "./assets/docs/Polytopes.pdf"
+  },
+  {
+    "title": "Gene",
+    "category": "Machine Learning",
+    "image": "project-3.png",
+    "url": "https://github.com/caiodrear/gene"
+  },
+  {
+    "title": "Secretariat",
+    "category": "Flask Web App",
+    "image": "project-4.png",
+    "url": "#"
+  },
+  {
+    "title": "Gayle",
+    "category": "Machine Learning",
+    "image": "project-5.png",
+    "url": "https://github.com/caiodrear/gayle"
+  },
+  {
+    "title": "iSeMBard",
+    "category": "Betting Strategy",
+    "image": "project-6.png",
+    "url": "#"
+  },
+  {
+    "title": "Acca Insurance",
+    "category": "Matched Betting Tool",
+    "image": "project-7.png",
+    "url": "https://github.com/caiodrear/acca_insurance"
+  }
+]

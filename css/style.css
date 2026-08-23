@@ -767,18 +767,18 @@ body {
 }
 
 /* -------------------------------------- *\
-    #RECIPE LOADING
+    #LOADING
 \* -------------------------------------- */
 
 /* held back so a quick load never flashes it */
-.recipe-loading {
+.loading-candle {
     display: grid;
     place-items: center;
     padding-block: 64px 48px;
     animation: candle-appear 300ms ease 320ms both;
 }
 
-.recipe-loading img {
+.loading-candle img {
     width: 44px;
     height: auto;
     animation: candle-gutter 3.2s ease-in-out infinite;
@@ -804,8 +804,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .recipe-loading,
-    .recipe-loading img {
+    .loading-candle,
+    .loading-candle img {
         animation: none;
     }
 }
@@ -993,7 +993,7 @@ body {
     border-block-end-color: var(--accent);
 }
 
-.recipe-error {
+.load-error {
     text-align: center;
     color: var(--on-surface-variant);
     font-style: italic;

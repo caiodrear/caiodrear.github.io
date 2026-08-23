@@ -28,6 +28,181 @@ $tabBtn.forEach(item => {
 });
 
 /* -------------------------------------- *\
+    #BOOKS
+
+    /assets/books.json, in shelf order. A book being read carries "reading"
+    in place of a date and rating:
+
+        { "title": "Culture and Anarchy", "cover": "culture.png",
+          "url": "https://...", "read": "24/8/2026", "rating": 1 }
+
+        { "title": "Wilhelm Meister's Apprenticeship", "cover": "meister.png",
+          "url": "https://...", "reading": true }
+\* -------------------------------------- */
+
+const BOOKS_FILE = "./assets/books.json";
+const BOOK_COVERS = "./assets/images/books/";
+const MAX_RATING = 5;
+
+/**
+ * @param {number} rating
+ * @returns {HTMLElement}
+ */
+const ratingStars = function (rating) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "rating-wrapper";
+
+    for (let star = 1; star <= MAX_RATING; star++) {
+        const icon = document.createElement("span");
+        icon.className = star <= rating
+            ? "material-symbols-outlined fill"
+            : "material-symbols-outlined";
+        icon.setAttribute("aria-hidden", "true");
+        icon.textContent = "star_rate";
+        wrapper.append(icon);
+    }
+
+    return wrapper;
+};
+
+/**
+ * @param {object} book
+ * @returns {HTMLElement}
+ */
+const bookCard = function (book) {
+    const item = document.createElement("div");
+
+    const card = document.createElement("div");
+    card.className = "card books";
+    item.append(card);
+
+    const figure = document.createElement("figure");
+    figure.className = "card-banner books img-holder books";
+    card.append(figure);
+
+    const cover = document.createElement("img");
+    cover.className = "img-cover books";
+    cover.src = BOOK_COVERS + book.cover;
+    cover.alt = book.title;
+    cover.loading = "lazy";
+    figure.append(cover);
+
+    const link = document.createElement("a");
+    link.className = "state-layer";
+    link.href = book.url;
+    link.target = "_blank";
+    link.rel = "noopener";
+    figure.append(link);
+
+    const content = document.createElement("div");
+    content.className = "card-content books";
+    item.append(content);
+
+    const title = document.createElement("h3");
+    title.className = "title-medium card-title";
+    title.textContent = book.title;
+    content.append(title);
+
+    const label = document.createElement("span");
+    label.className = book.reading ? "label-large reading" : "label-large";
+    label.textContent = book.reading ? "Currently Reading" : book.read;
+    content.append(label);
+
+    content.append(ratingStars(book.reading ? 0 : book.rating ?? 0));
+
+    return item;
+};
+
+/* -------------------------------------- *\
+    #PROJECTS
+
+    /assets/projects.json, in display order.
+
+        { "title": "Gene", "category": "Machine Learning",
+          "image": "project-3.png", "url": "https://..." }
+\* -------------------------------------- */
+
+const PROJECTS_FILE = "./assets/projects.json";
+const PROJECT_IMAGES = "./assets/images/projects/";
+
+/**
+ * @param {object} project
+ * @returns {HTMLElement}
+ */
+const projectCard = function (project) {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const figure = document.createElement("figure");
+    figure.className = "card-banner img-holder";
+    figure.style.setProperty("--width", "334");
+    figure.style.setProperty("--height", "180");
+    card.append(figure);
+
+    const image = document.createElement("img");
+    image.className = "img-cover";
+    image.src = PROJECT_IMAGES + project.image;
+    image.alt = project.title;
+    image.width = 334;
+    image.height = 180;
+    image.loading = "lazy";
+    figure.append(image);
+
+    const content = document.createElement("div");
+    content.className = "card-content";
+    card.append(content);
+
+    const category = document.createElement("span");
+    category.className = "label-large";
+    category.textContent = project.category;
+    content.append(category);
+
+    const title = document.createElement("h3");
+    title.className = "title-large card-title";
+    title.textContent = project.title;
+    content.append(title);
+
+    const link = document.createElement("a");
+    link.className = "state-layer";
+    link.href = project.url;
+    if (project.url.startsWith("http")) {
+        link.target = "_blank";
+        link.rel = "noopener";
+    }
+    card.append(link);
+
+    return card;
+};
+
+/**
+ * Fills a list from a JSON file, leaving a message behind if it cannot be read.
+ *
+ * @param {string} selector attribute selector for the container
+ * @param {string} file
+ * @param {function} build turns one entry into an element
+ * @param {string} failure text shown if the file cannot be read
+ */
+const buildList = async function (selector, file, build, failure) {
+    const $list = document.querySelector(selector);
+    if (!$list) return;
+
+    const $loading = $list.parentElement.querySelector("[data-loading]");
+
+    try {
+        const response = await fetch(file);
+        if (!response.ok) throw new Error(response.status);
+        (await response.json()).forEach(entry => $list.append(build(entry)));
+    } catch (error) {
+        const message = document.createElement("p");
+        message.className = "load-error";
+        message.textContent = failure;
+        $list.append(message);
+    } finally {
+        $loading?.remove();
+    }
+};
+
+/* -------------------------------------- *\
     #RECIPES
 
     /assets/recipes.json lists every recipe in display order. It is the only
@@ -130,7 +305,7 @@ const openRecipe = async function (entry) {
         recipe = await loadBody(entry.file);
     } catch (error) {
         const message = document.createElement("p");
-        message.className = "recipe-error";
+        message.className = "load-error";
         message.textContent = "This recipe could not be read.";
         $sheetBody.append(message);
         return;
@@ -244,7 +419,7 @@ const buildRecipeIndex = async function () {
     const $index = document.querySelector("[data-recipe-index]");
     if (!$index) return;
 
-    const $loading = document.querySelector("[data-recipe-loading]");
+    const $loading = $index.parentElement.querySelector("[data-loading]");
 
     let recipes;
     try {
@@ -253,7 +428,7 @@ const buildRecipeIndex = async function () {
         recipes = await response.json();
     } catch (error) {
         const message = document.createElement("p");
-        message.className = "recipe-error";
+        message.className = "load-error";
         message.textContent = "The recipes could not be loaded.";
         $index.append(message);
         return;
@@ -278,3 +453,5 @@ $sheet?.addEventListener("click", function (event) {
 });
 
 buildRecipeIndex();
+buildList("[data-book-list]", BOOKS_FILE, bookCard, "The books could not be loaded.");
+buildList("[data-project-list]", PROJECTS_FILE, projectCard, "The projects could not be loaded.");
