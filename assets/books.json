@@ -1,0 +1,274 @@
+[
+  {
+    "title": "Wilhelm Meister's Apprenticeship",
+    "cover": "meister.png",
+    "url": "https://www.goodreads.com/book/show/31566320",
+    "reading": true
+  },
+  {
+    "title": "Culture and Anarchy",
+    "cover": "culture.png",
+    "url": "https://www.goodreads.com/book/show/12612203",
+    "read": "24/8/2026",
+    "rating": 1
+  },
+  {
+    "title": "The Fall of the House of Usher",
+    "cover": "usher.png",
+    "url": "https://www.goodreads.com/book/show/228895505",
+    "read": "3/8/2026",
+    "rating": 4
+  },
+  {
+    "title": "Far from the Madding Crowd",
+    "cover": "madding.png",
+    "url": "https://www.goodreads.com/book/show/25310599",
+    "read": "23/6/2026",
+    "rating": 3
+  },
+  {
+    "title": "Daybreak",
+    "cover": "daybreak.png",
+    "url": "https://www.goodreads.com/book/show/2080441",
+    "read": "19/5/2026",
+    "rating": 3
+  },
+  {
+    "title": "Elective Affinities",
+    "cover": "affinities.png",
+    "url": "https://www.goodreads.com/book/show/132947425",
+    "read": "28/4/2026",
+    "rating": 4
+  },
+  {
+    "title": "Mrs Dalloway",
+    "cover": "dalloway.png",
+    "url": "https://www.goodreads.com/book/show/52692585",
+    "read": "29/3/2026",
+    "rating": 3
+  },
+  {
+    "title": "The Idiot",
+    "cover": "idiot.png",
+    "url": "https://www.goodreads.com/book/show/223187829",
+    "read": "8/3/2026",
+    "rating": 3
+  },
+  {
+    "title": "Faust",
+    "cover": "faust.png",
+    "url": "https://www.goodreads.com/book/show/148034380",
+    "read": "30/12/2025",
+    "rating": 3
+  },
+  {
+    "title": "Italian Journey",
+    "cover": "italian.png",
+    "url": "https://www.goodreads.com/book/show/133479913",
+    "read": "20/11/2025",
+    "rating": 4
+  },
+  {
+    "title": "The Sorrows of Young Werther",
+    "cover": "werther.png",
+    "url": "https://www.goodreads.com/book/show/594913",
+    "read": "4/10/2025",
+    "rating": 4
+  },
+  {
+    "title": "The Odyssey",
+    "cover": "odyssey.png",
+    "url": "https://www.goodreads.com/book/show/6929661",
+    "read": "23/9/2025",
+    "rating": 4
+  },
+  {
+    "title": "Decline and Fall",
+    "cover": "decline.png",
+    "url": "https://www.goodreads.com/book/show/17661156",
+    "read": "4/9/2025",
+    "rating": 5
+  },
+  {
+    "title": "Persuasion",
+    "cover": "persuasion.png",
+    "url": "https://www.goodreads.com/book/show/11758566",
+    "read": "17/8/2025",
+    "rating": 2
+  },
+  {
+    "title": "Beyond Good and Evil",
+    "cover": "evil.png",
+    "url": "https://www.goodreads.com/book/show/129758652",
+    "read": "26/7/2025",
+    "rating": 2
+  },
+  {
+    "title": "Mr Weston's Good Wine",
+    "cover": "weston.png",
+    "url": "https://www.goodreads.com/book/show/127376659",
+    "read": "10/7/2025",
+    "rating": 3
+  },
+  {
+    "title": "The Monk",
+    "cover": "monk.png",
+    "url": "https://www.goodreads.com/book/show/52113301",
+    "read": "22/6/2025",
+    "rating": 3
+  },
+  {
+    "title": "Wuthering Heights",
+    "cover": "wuthering.png",
+    "url": "https://www.goodreads.com/book/show/142992560",
+    "read": "22/5/2025",
+    "rating": 4
+  },
+  {
+    "title": "The Nature of Things",
+    "cover": "lucretius.png",
+    "url": "https://www.goodreads.com/book/show/22571770",
+    "read": "21/4/2025",
+    "rating": 4
+  },
+  {
+    "title": "The Brothers Karamazov",
+    "cover": "karamazov.png",
+    "url": "https://www.goodreads.com/book/show/125045149",
+    "read": "1/4/2025",
+    "rating": 4
+  },
+  {
+    "title": "The Canterbury Tales",
+    "cover": "canterbury.png",
+    "url": "https://www.goodreads.com/book/show/18367369",
+    "read": "31/12/2024",
+    "rating": 4
+  },
+  {
+    "title": "Villette",
+    "cover": "villette.png",
+    "url": "https://www.goodreads.com/book/show/26805367",
+    "read": "23/11/2024",
+    "rating": 3
+  },
+  {
+    "title": "The Ecclesiastical History of the English People",
+    "cover": "bede.png",
+    "url": "https://www.goodreads.com/book/show/4234790",
+    "read": "1/10/2024",
+    "rating": 3
+  },
+  {
+    "title": "The Tenant of Wildfell Hall",
+    "cover": "wildfell.png",
+    "url": "https://www.goodreads.com/book/show/26027451",
+    "read": "26/08/2024",
+    "rating": 5
+  },
+  {
+    "title": "Orlando",
+    "cover": "orlando.png",
+    "url": "https://www.goodreads.com/book/show/29847090",
+    "read": "11/07/2024",
+    "rating": 3
+  },
+  {
+    "title": "The Count of Monte Cristo",
+    "cover": "cristo.png",
+    "url": "https://www.goodreads.com/book/show/170577265",
+    "read": "21/06/2024",
+    "rating": 4
+  },
+  {
+    "title": "Crime and Punishment",
+    "cover": "crime.png",
+    "url": "https://www.goodreads.com/book/show/38088979",
+    "read": "03/03/2024",
+    "rating": 4
+  },
+  {
+    "title": "A Christmas Carol",
+    "cover": "carol.png",
+    "url": "https://www.goodreads.com/book/show/49771964",
+    "read": "30/12/2023",
+    "rating": 3
+  },
+  {
+    "title": "The State and Revolution",
+    "cover": "lenin.png",
+    "url": "https://www.goodreads.com/book/show/823272",
+    "read": "23/12/2023",
+    "rating": 2
+  },
+  {
+    "title": "Fear and Trembling",
+    "cover": "trembling.png",
+    "url": "https://www.goodreads.com/book/show/24486946",
+    "read": "9/12/23",
+    "rating": 1
+  },
+  {
+    "title": "Twenty Thousand Leagues Under the Sea",
+    "cover": "leagues.png",
+    "url": "https://www.goodreads.com/book/show/25291348",
+    "read": "29/11/2023",
+    "rating": 4
+  },
+  {
+    "title": "Utopia",
+    "cover": "utopia.png",
+    "url": "https://www.goodreads.com/book/show/52116277",
+    "read": "16/10/2023",
+    "rating": 3
+  },
+  {
+    "title": "The Prince",
+    "cover": "prince.png",
+    "url": "https://www.goodreads.com/book/show/22571595",
+    "read": "6/10/15",
+    "rating": 2
+  },
+  {
+    "title": "The Muqaddimah",
+    "cover": "muqaddimah.png",
+    "url": "https://www.goodreads.com/book/show/23528925",
+    "read": "27/09/2023",
+    "rating": 2
+  },
+  {
+    "title": "Don Quixote",
+    "cover": "quixote.png",
+    "url": "https://www.goodreads.com/book/show/38088980",
+    "read": "14/08/2023",
+    "rating": 3
+  },
+  {
+    "title": "Tales from 1001 Nights",
+    "cover": "nights.png",
+    "url": "https://www.goodreads.com/book/show/44639578",
+    "read": "11/05/2023",
+    "rating": 5
+  },
+  {
+    "title": "The Travels",
+    "cover": "travels.png",
+    "url": "https://www.goodreads.com/book/show/132983768",
+    "read": "24/03/2023",
+    "rating": 1
+  },
+  {
+    "title": "Monkey King",
+    "cover": "monkey.png",
+    "url": "https://www.goodreads.com/book/show/53403847",
+    "read": "18/02/2023",
+    "rating": 4
+  },
+  {
+    "title": "Dracula",
+    "cover": "dracula.png",
+    "url": "https://www.goodreads.com/book/show/9786023",
+    "read": "19/01/2023",
+    "rating": 3
+  }
+]
