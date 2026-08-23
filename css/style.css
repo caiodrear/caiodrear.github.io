@@ -1,55 +1,63 @@
 /* -------------------------------------- *\
-    #CUSTOM PROPERTY 
+    #CUSTOM PROPERTY
 \* -------------------------------------- */
 
 :root {
-    --background: hsl(51, 100%, 98%);
-    --on-background: hsl(51, 8%, 12%);
-    --profile-bg: hsl(48, 21%, 73%);
-    --surface: hsl(51, 100%, 98%);
-    --on-surface: hsl(51, 8%, 12%);
-    --on-surface-variant: hsl(51, 7%, 29%);
-    --surface-container-low: hsl(51, 44%, 96%);
-    --surface-container: hsl(51, 38%, 95%);
-    --surface-bright: hsl(51, 100%, 98%);
+    /* -- paper & ink -- */
+    --background: hsl(44, 44%, 96%);
+    --on-background: hsl(30, 13%, 14%);
+    --profile-bg: hsl(172, 17%, 72%);
+    --surface: hsl(44, 44%, 96%);
+    --on-surface: hsl(30, 13%, 14%);
+    --on-surface-variant: hsl(30, 9%, 33%);
+    --surface-container-low: hsl(44, 40%, 94%);
+    --surface-container: hsl(43, 36%, 92%);
+    --surface-bright: hsl(44, 50%, 98%);
     --primary: hsl(51, 100%, 18%);
-    --outline: hsl(51, 4%, 47%);
-    --outline-variant: hsl(51, 10%, 79%);
+    --accent: hsl(36, 80%, 30%);
+    --outline: hsl(36, 11%, 45%);
+    --outline-variant: hsl(38, 20%, 78%);
+    --rule-strong: hsl(35, 16%, 60%);
     --on-primary: hsl(0, 0%, 100%);
 
-    --font-primary: 'Open Sans', sans-serif;
-    --font-secondary: 'Noto Sans', sans-serif;
+    --font-primary: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+    --font-secondary: 'EB Garamond', Georgia, 'Times New Roman', serif;
 
     --base-font-size: 62.5%;
-    --display-large: 5.7rem;
-    --display-medium: 4.5rem;
-    --display-small: 3.6rem;
-    --headline-large: 3.2rem;
-    --headline-medium: 2.8rem;
-    --headline-small: 2.4rem;
-    --title-large: 2rem;
-    --title-medium: 1.6rem;
-    --title-small: 1.4rem;
-    --label-large: 1.4rem;
-    --label-medium: 1.2rem;
-    --label-small: 1.1rem;
-    --body-large: 1.6rem;
-    --body-medium: 1.4rem;
-    --body-small: 1.2rem;
+    --display-large: 6.8rem;
+    --display-medium: 5.4rem;
+    --display-small: 4.8rem;
+    --headline-large: 3.7rem;
+    --headline-medium: 3.2rem;
+    --headline-small: 2.8rem;
+    --title-large: 2.5rem;
+    --title-medium: 2.2rem;
+    --title-small: 1.8rem;
+    --label-large: 1.65rem;
+    --label-medium: 1.6rem;
+    --label-small: 1.45rem;
+    --body-large: 2.05rem;
+    --body-medium: 1.85rem;
+    --body-small: 1.6rem;
 
     --weight-regular: 400;
     --weight-medium: 500;
+    --weight-bold: 600;
+    --weight-heavy: 700;
 
-    --radius-extra-small: 4px;
-    --radius-small: 8px;
-    --radius-medium: 12px;
-    --radius-large: 16px;
+    /* Victorian print sets type on a sharp corner, not a rounded one. */
+    --radius-extra-small: 0px;
+    --radius-small: 1px;
+    --radius-medium: 2px;
+    --radius-large: 2px;
     --radius-full: 500px;
     --radius-circle: 50%;
 
-    --elevation-1: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004d;
+    --elevation-1: 0 1px 0 hsl(38 20% 84%), 0 2px 10px hsl(35 25% 40% / 0.07);
 
-    --section-padding: 24px;
+    --ornament-feather: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath fill-rule='evenodd' fill='%23000' d='M22.6 2.4c-.8 8.2-5.6 14.4-12.9 16.8l-5.9 5.2-.9-1 4.6-5.9C9.2 10.1 15.1 4.4 22.6 2.4Z M20.4 5.1 5.9 19.6l.7.7L21.1 5.8Z'/%3E%3C/svg%3E");
+
+    --section-padding: 28px;
     --top-bar-height: 72px;
 }
 
@@ -57,7 +65,7 @@
 
     :root {
 
-        --motion-duration-short-1: 100ms;
+        --motion-duration-short-1: 120ms;
 
         --motion-easing-linear: cubic-bezier(0, 0, 1, 1)
     }
@@ -66,7 +74,7 @@
 .material-symbols-outlined.about {
     font-variation-settings:
         'FILL' 0,
-        'wght' 400,
+        'wght' 300,
         'GRAD' 0,
         'opsz' 24
 }
@@ -89,7 +97,12 @@
 
 .rating-wrapper {
     display: flex;
-    color: var(--on-surface);
+    color: var(--primary);
+    font-size: 2.1rem;
+}
+
+.rating-wrapper .material-symbols-outlined {
+    font-size: 2.1rem;
 }
 
 
@@ -158,6 +171,17 @@ body {
     background-color: var(--background);
     color: var(--on-background);
     font-size: var(--body-large);
+    /* laid-paper tint: a touch of grain so the cream doesn't read as flat #fff */
+    background-image:
+        radial-gradient(hsl(38 30% 70% / 0.10) 0.5px, transparent 0.5px),
+        radial-gradient(hsl(38 30% 70% / 0.07) 0.5px, transparent 0.5px);
+    background-size: 3px 3px, 5px 5px;
+    background-position: 0 0, 2px 1px;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background-color: hsl(51 100% 18% / 0.16);
 }
 
 /* -------------------------------------- *\
@@ -165,71 +189,72 @@ body {
 \* -------------------------------------- */
 
 .flag {
-    font-size: var(--headline-large);
+    font-size: 2.8rem;
+    line-height: 1;
+    filter: saturate(0.82) contrast(0.94);
+}
+
+.display-large,
+.display-medium,
+.display-small,
+.headline-large,
+.headline-medium,
+.headline-small {
+    font-family: var(--font-primary);
+    font-weight: var(--weight-regular);
 }
 
 .display-large {
-    font-family: var(--font-primary);
     font-size: var(--display-large);
-    font-weight: var(--weight-regular);
-    line-height: 64px;
-    letter-spacing: -0.25px;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
 }
 
 .display-medium {
-    font-family: var(--font-primary);
     font-size: var(--display-medium);
-    font-weight: var(--weight-regular);
-    line-height: 52px;
+    line-height: 1.1;
 }
 
 .display-small {
-    font-family: var(--font-primary);
     font-size: var(--display-small);
-    font-weight: var(--weight-regular);
-    line-height: 44px;
+    line-height: 1.12;
+    letter-spacing: 0.2px;
 }
 
 .headline-large {
-    font-family: var(--font-primary);
     font-size: var(--headline-large);
-    font-weight: var(--weight-regular);
-    line-height: 40;
+    line-height: 1.2;
 }
 
 .headline-medium {
-    font-family: var(--font-primary);
     font-size: var(--headline-medium);
-    font-weight: var(--weight-regular);
-    line-height: 36;
+    line-height: 1.2;
 }
 
 .headline-small {
-    font-family: var(--font-primary);
     font-size: var(--headline-small);
-    font-weight: var(--weight-regular);
-    line-height: 32;
+    line-height: 1.25;
 }
 
 .title-large {
     font-family: var(--font-primary);
     font-size: var(--title-large);
-    font-weight: var(--weight-regular);
-    line-height: 28px;
+    font-weight: var(--weight-medium);
+    line-height: 1.25;
 }
 
 .title-medium {
     font-family: var(--font-primary);
     font-size: var(--title-medium);
     font-weight: var(--weight-medium);
-    line-height: 24px;
-    letter-spacing: 0.15px;
+    line-height: 1.25;
+    letter-spacing: 0.1px;
 }
 
 .title-small {
     font-family: var(--font-primary);
     font-size: var(--title-small);
-    font-weight: var(--weight-medium);
+    font-weight: var(--weight-bold);
     line-height: 20px;
     letter-spacing: 0.1px;
 }
@@ -237,43 +262,75 @@ body {
 .body-large {
     font-size: var(--body-large);
     font-weight: var(--weight-regular);
-    line-height: 24px;
-    letter-spacing: 0.5px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
 }
 
 .body-medium {
     font-weight: var(--weight-regular);
     font-size: var(--body-medium);
-    line-height: 20px;
-    letter-spacing: 0.25px;
+    line-height: 1.55;
+    letter-spacing: 0.1px;
 }
 
 .body-small {
     font-size: var(--body-small);
     font-weight: var(--weight-regular);
-    line-height: 16px;
-    letter-spacing: 0.4px;
+    line-height: 1.45;
+    letter-spacing: 0.2px;
+}
+
+/* Labels are set as letterspaced small caps -- the running-head convention. */
+.label-large,
+.label-medium,
+.label-small {
+    font-family: var(--font-secondary);
+    font-weight: var(--weight-bold);
+    font-variant: small-caps;
+    text-transform: lowercase;
 }
 
 .label-large {
     font-size: var(--label-large);
-    font-weight: var(--weight-medium);
     line-height: 20px;
-    letter-spacing: 0.1px;
+    letter-spacing: 1.1px;
 }
 
 .label-medium {
-    font-weight: var(--label-medium);
-    font-size: var(--weight-medium);
-    line-height: 16px;
-    letter-spacing: 0.5px;
+    font-size: var(--label-medium);
+    line-height: 18px;
+    letter-spacing: 0.9px;
 }
 
 .label-small {
     font-size: var(--label-small);
-    font-weight: var(--weight-medium);
     line-height: 16px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.9px;
+}
+
+/* -------------------------------------- *\
+    #ORNAMENT
+\* -------------------------------------- */
+
+.ornament {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--rule-strong);
+    margin-block: 4px;
+}
+
+.ornament::before,
+.ornament::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--outline-variant);
+}
+
+.ornament span {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
 }
 
 /* -------------------------------------- *\
@@ -290,8 +347,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 16px;
+    padding-inline: 24px;
     z-index: 4;
+    /* double rule, as on a title page */
+    border-block-end: 1px solid var(--outline-variant);
+    box-shadow: 0 3px 0 -2px var(--outline-variant);
+}
+
+.topbar .logo img {
+    height: 46px;
+    width: auto;
 }
 
 /* -------------------------------------- *\
@@ -330,34 +395,87 @@ body {
 .img-cover.books {
     object-fit: contain;
     width: auto;
+    background-color: transparent;
 }
 
 .hero {
-    padding-block-start: calc(var(--top-bar-height) + 24px)
+    padding-block-start: calc(var(--top-bar-height) + 32px)
 }
 
 .hero .container {
     display: grid;
     align-items: center;
-    gap: 24px;
+    gap: 28px;
 }
 
 .hero-banner {
-    width: 240px;
+    width: 176px;
     border-radius: var(--radius-circle);
+    /* engraved-plate ring */
+    border: 1px solid var(--outline-variant);
+    outline: 1px solid var(--outline-variant);
+    outline-offset: 5px;
 }
 
 .hero-content {
-    max-width: 500px;
+    max-width: 540px;
 }
 
-.hero.section-subtitle {
-    color: var(--on-surface-variant);
+.hero .section-subtitle {
+    color: var(--accent);
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 2.4px;
+    font-size: 1.75rem;
+}
+
+.hero .display-small {
+    margin-block: 2px 4px;
 }
 
 .hero .section-text {
-    margin-block: 5px;
+    margin-block: 0;
     color: var(--on-surface-variant);
+    max-width: 46ch;
+}
+
+.drop-cap::first-letter {
+    float: left;
+    font-family: var(--font-primary);
+    font-size: 3.8rem;
+    font-weight: var(--weight-bold);
+    line-height: 0.85;
+    color: var(--accent);
+    padding-inline-end: 7px;
+    padding-block-start: 0;
+}
+
+/* the heading shrinks to the name so the rule beneath can match its measure */
+.hero-content .display-small {
+    width: fit-content;
+    max-width: 100%;
+}
+
+/* a quill flanked by rules, drawn as a mask so it still takes --accent */
+.hero-content .display-small::after {
+    --rule-length: calc(50% - 15px);
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 17px;
+    margin-block: 4px 5px;
+    background-color: var(--accent);
+    -webkit-mask:
+        var(--ornament-feather) no-repeat center / auto 17px,
+        linear-gradient(#000, #000) no-repeat left center / var(--rule-length) 1.3px,
+        linear-gradient(#000, #000) no-repeat right center / var(--rule-length) 1.3px;
+    mask:
+        var(--ornament-feather) no-repeat center / auto 17px,
+        linear-gradient(#000, #000) no-repeat left center / var(--rule-length) 1.3px,
+        linear-gradient(#000, #000) no-repeat right center / var(--rule-length) 1.3px;
+    -webkit-mask-composite: source-over;
+    mask-composite: add;
 }
 
 /* -------------------------------------- *\
@@ -368,17 +486,25 @@ body {
     background-color: var(--surface-container-low);
     color: var(--on-surface-variant);
     margin-inline: 16px;
-    padding: 16px;
+    padding: 20px;
     border-radius: var(--radius-large);
+    border: 1px solid var(--outline-variant);
+    box-shadow: 0 0 0 1px var(--background), 0 0 0 2px hsl(38 20% 86%);
 }
 
 .about-card .card-title {
     color: var(--on-surface);
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 1.8px;
+    font-size: 2.1rem;
+    font-weight: var(--weight-bold);
 }
 
 .about-card .card-text {
-    margin-block: 12px;
-    padding-block: 12px;
+    font-size: var(--body-medium);
+    margin-block: 14px;
+    padding-block: 14px;
     border-block: 1px solid var(--outline-variant);
 }
 
@@ -388,14 +514,48 @@ body {
 }
 
 .bigger-icon {
-    font-size: 18px;
+    font-size: 20px;
     padding: 3px;
 }
 
 .list-item {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
+}
+
+.list-item {
+    color: var(--on-surface);
+}
+
+.list-item .material-symbols-outlined {
+    font-size: 20px;
+    color: var(--outline);
+}
+
+.list-item .bigger-icon {
+    color: var(--outline);
+}
+
+.list-item .label-medium {
+    font-variant: normal;
+    text-transform: none;
+    font-family: var(--font-secondary);
+    font-size: 1.75rem;
+    font-weight: var(--weight-regular);
+    letter-spacing: 0.1px;
+    line-height: 1.4;
+    color: var(--on-surface);
+}
+
+.list-item a.label-medium {
+    border-block-end: 1px solid var(--outline-variant);
+    transition: var(--motion-duration-short-1) var(--motion-easing-linear);
+}
+
+.list-item a.label-medium:hover {
+    color: var(--accent);
+    border-block-end-color: var(--accent);
 }
 
 /* -------------------------------------- *\
@@ -418,12 +578,12 @@ body {
 
 @media (hover: hover) {
     :has(> .state-layer):hover .state-layer {
-        opacity: 0.08;
+        opacity: 0.06;
     }
 }
 
 :has(> .state-layer):is(:focus, :focus-visible, :active) .state-layer {
-    opacity: 0.12;
+    opacity: 0.1;
 }
 
 .primary-tabs {
@@ -433,28 +593,41 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    border-block-end: 1px solid var(--outline-variant);
+    border-block-end: 1px solid var(--rule-strong);
 }
 
 .tab-btn {
-    height: 48px;
+    height: 56px;
     width: 100%;
     display: grid;
     place-content: center;
-    background-color: var(--surface);
-    color: var(--on-surface-variant);
+    background-color: transparent;
+    color: var(--on-surface);
     --state-layer-bg: var(--on-surface-variant);
 }
 
+.tab-btn .tab-text {
+    font-family: var(--font-primary);
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 2.6px;
+    font-size: 2.5rem;
+    font-weight: var(--weight-heavy);
+}
+
+.tab-btn.active .tab-text {
+    color: var(--accent);
+}
+
 .tab-btn.active {
-    color: var(--primary);
-    --state-layer-bg: var(var(--primary));
+    color: var(--accent);
+    --state-layer-bg: var(--primary);
 }
 
 .tab-text {
     position: relative;
-    height: 48px;
-    line-height: 48px;
+    height: 56px;
+    line-height: 56px;
 }
 
 .tab-text::after {
@@ -464,8 +637,9 @@ body {
     left: 0;
     width: 100%;
     height: 3px;
-    border-radius: 3px 3px 0 0;
-    background-color: var(--primary);
+    border-radius: 0;
+    background-color: var(--accent);
+    box-shadow: 0 -3px 0 -1px var(--accent);
     opacity: 0;
 }
 
@@ -484,7 +658,7 @@ body {
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 12px;
+    gap: 16px;
 }
 
 .project-list.books {
@@ -494,7 +668,9 @@ body {
 }
 
 .project-list.recipes {
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 0;
+    border-block-start: 1px solid var(--outline-variant);
 }
 
 .project-list.art {
@@ -504,14 +680,45 @@ body {
 .card {
     background-color: var(--surface-container-low);
     border-radius: var(--radius-medium);
+    border: 1px solid var(--outline-variant);
     padding: 16px;
     display: grid;
     gap: 16px;
     --state-layer-bg: var(--on-surface);
+    transition: var(--motion-duration-short-1) var(--motion-easing-linear);
+}
+
+@media (hover: hover) {
+    .card:not(.books):hover {
+        border-color: var(--rule-strong);
+    }
+}
+
+.card:not(.books) .card-content {
+    gap: 8px;
+}
+
+/* the category is a ticket: small, tracked, oxblood, set above a rule */
+.card:not(.books) .label-large {
+    color: var(--accent);
+    font-size: 1.3rem;
+    letter-spacing: 2.6px;
+    font-weight: var(--weight-heavy);
+    padding-block-end: 8px;
+    border-block-end: 1px solid var(--outline-variant);
+}
+
+.card:not(.books) .card-title {
+    font-family: var(--font-primary);
+    font-size: 2.7rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.1;
+    letter-spacing: 0.2px;
 }
 
 .card.books {
     padding: 0px;
+    border: none;
     border-radius: 0;
     background-color: transparent;
 }
@@ -522,6 +729,16 @@ body {
 
 .card-banner.books {
     border-radius: 0;
+    /* books sit on a shelf: a hairline edge and a cast shadow */
+    filter: drop-shadow(2px 3px 5px hsl(35 25% 30% / 0.28));
+    transition: var(--motion-duration-short-1) var(--motion-easing-linear);
+}
+
+@media (hover: hover) {
+    .card.books:hover .card-banner.books {
+        filter: drop-shadow(3px 5px 9px hsl(35 25% 30% / 0.36));
+        transform: translateY(-2px);
+    }
 }
 
 .card-content {
@@ -530,15 +747,56 @@ body {
 }
 
 .card-content.books {
-    margin-top: 8px;
+    margin-top: 14px;
     justify-content: center;
+    text-align: center;
+    gap: 5px;
 }
 
-.card-content.recipe {
-    display: flex;
-    align-items: center;
-    /* Vertically center items */
-    gap: 8px
+/* titles of works are italicised -- the convention, and the loudest thing on the card */
+.card-content.books .card-title {
+    max-width: 20ch;
+    font-family: var(--font-primary);
+    font-style: italic;
+    font-weight: var(--weight-bold);
+    font-size: 2.25rem;
+    line-height: 1.15;
+    color: var(--on-surface);
+}
+
+/* the date is the quietest line on the card -- but still a date, not small caps */
+.card-content.books .label-large {
+    color: var(--on-surface-variant);
+    font-family: var(--font-secondary);
+    font-variant: normal;
+    text-transform: none;
+    font-style: normal;
+    font-weight: var(--weight-medium);
+    font-size: 1.75rem;
+    letter-spacing: 0.3px;
+    font-variant-numeric: lining-nums;
+}
+
+/* a book in progress is called out, not dated */
+.card-content.books .label-large.reading {
+    font-style: italic;
+    font-size: 1.85rem;
+    letter-spacing: 0.1px;
+    color: var(--accent);
+}
+
+.card-content.books .rating-wrapper {
+    justify-content: center;
+    margin-block-start: 1px;
+}
+
+.card-content.books .rating-wrapper .material-symbols-outlined {
+    font-size: 2.2rem;
+    color: var(--outline-variant);
+}
+
+.card-content.books .rating-wrapper .material-symbols-outlined.fill {
+    color: var(--accent);
 }
 
 .card-subtitle {
@@ -550,20 +808,279 @@ body {
 }
 
 /* -------------------------------------- *\
-    #FOOTER
+    #RECIPES  (an index, not a card grid)
 \* -------------------------------------- */
 
-.footer .container {
+.recipes-tab .card {
+    background-color: transparent;
+    border: none;
+    border-block-end: 1px solid var(--outline-variant);
+    border-radius: 0;
+    padding: 14px 12px;
+    gap: 0;
+}
+
+@media (hover: hover) {
+    .recipes-tab .card:hover {
+        background-color: var(--surface-container);
+    }
+}
+
+.card-content.recipe {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.card-content.recipe .flag {
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.card-content.recipe .card-title {
+    font-family: var(--font-primary);
+    font-weight: var(--weight-bold);
+    font-size: 2.4rem;
+    letter-spacing: 0.2px;
+}
+
+/* an outbound recipe is marked, so you know you are leaving the page */
+.recipes-tab .card.external .card-title::after {
+    content: " ↗";
+    color: var(--outline);
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+/* -------------------------------------- *\
+    #RECIPE SHEET
+\* -------------------------------------- */
+
+.recipe-sheet {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: min(560px, calc(100vw - 32px));
+    max-height: min(84dvh, 860px);
+    padding: 0;
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--radius-medium);
+    background-color: var(--surface-bright);
+    color: var(--on-background);
+    box-shadow: 0 18px 50px hsl(30 25% 15% / 0.28);
+    overflow: hidden;
+}
+
+.recipe-sheet::backdrop {
+    background-color: hsl(30 18% 20% / 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.recipe-sheet-inner {
+    max-height: min(84dvh, 860px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 32px 34px 28px;
+    /* inner keyline, like a printed plate */
+    box-shadow: inset 0 0 0 1px var(--background), inset 0 0 0 2px var(--outline-variant);
+}
+
+.recipe-sheet-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-content: center;
+    color: var(--outline);
+    font-size: 2.2rem;
+    line-height: 1;
+    border-radius: var(--radius-circle);
+}
+
+.recipe-sheet-close:hover {
+    color: var(--accent);
+}
+
+.recipe-head {
     text-align: center;
-    padding: 16px;
+    padding-block-end: 14px;
+    border-block-end: 1px solid var(--outline-variant);
+    box-shadow: 0 3px 0 -2px var(--outline-variant);
+    margin-block-end: 22px;
+}
+
+.recipe-head .eyebrow {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 3px;
+    font-size: 1.4rem;
+    color: var(--outline);
+}
+
+.recipe-head h2 {
+    font-family: var(--font-primary);
+    font-size: 3.7rem;
+    font-weight: var(--weight-medium);
+    line-height: 1.15;
+    margin-block: 6px 8px;
+}
+
+.recipe-head .serves {
+    font-style: italic;
+    color: var(--on-surface-variant);
+    font-size: var(--body-medium);
+    font-variant-numeric: oldstyle-nums;
+}
+
+.recipe-section-title {
+    font-family: var(--font-primary);
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    font-size: 2.1rem;
+    color: var(--accent);
+    margin-block: 22px 10px;
+    text-align: center;
+}
+
+.recipe-section-title:first-child {
+    margin-block-start: 0;
+}
+
+.ingredient-list {
+    display: grid;
+    gap: 2px;
+}
+
+/* dotted leaders, as in a bill of fare */
+.ingredient {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: var(--body-medium);
+    padding-block: 3px;
+}
+
+.ingredient .name::first-letter {
+    text-transform: uppercase;
+}
+
+.ingredient .name {
+    font-weight: var(--weight-medium);
+}
+
+.ingredient .leader {
+    flex: 1;
+    border-block-end: 1px dotted var(--outline-variant);
+    transform: translateY(-4px);
+    min-width: 18px;
+}
+
+.ingredient .qty {
+    color: var(--on-surface-variant);
+    font-variant-numeric: oldstyle-nums;
+    white-space: nowrap;
+}
+
+.method-list {
+    display: grid;
+    gap: 12px;
+    counter-reset: step;
+    padding-inline-start: 2px;
+}
+
+.method-list li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2.4rem 1fr;
+    gap: 10px;
+    font-size: var(--body-medium);
+    line-height: 1.55;
+}
+
+.method-list li::before {
+    counter-increment: step;
+    content: counter(step) ".";
+    font-family: var(--font-primary);
+    font-size: 1.9rem;
+    font-weight: var(--weight-bold);
+    color: var(--accent);
+    font-variant-numeric: oldstyle-nums;
+    text-align: right;
+    line-height: 1.45;
+}
+
+.recipe-foot {
+    margin-block-start: 26px;
+    padding-block-start: 14px;
     border-block-start: 1px solid var(--outline-variant);
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.recipe-foot a {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 1.4px;
+    font-size: 1.5rem;
+    color: var(--outline);
+    border-block-end: 1px solid var(--outline-variant);
+}
+
+.recipe-foot a:hover {
+    color: var(--accent);
+    border-block-end-color: var(--accent);
+}
+
+.recipe-error {
+    text-align: center;
+    color: var(--on-surface-variant);
+    font-style: italic;
 }
 
 /* -------------------------------------- *\
     #MEDIA QUERIES
 \* -------------------------------------- */
 
+@media (max-width: 560px) {
 
+    .recipe-sheet {
+        width: calc(100vw - 20px);
+        max-height: 90dvh;
+    }
+
+    .recipe-sheet-inner {
+        max-height: 90dvh;
+        padding: 26px 20px 22px;
+    }
+
+    .recipe-head h2 {
+        font-size: 3rem;
+    }
+
+    .method-list li {
+        grid-template-columns: 2rem 1fr;
+        gap: 8px;
+    }
+
+    .ingredient .qty {
+        max-width: 40%;
+        white-space: normal;
+        text-align: right;
+    }
+
+    .primary-tabs {
+        margin-inline: 8px;
+    }
+
+    .tab-btn .tab-text {
+        letter-spacing: 1.2px;
+        font-size: 1.8rem;
+    }
+}
 
 @media (min-width: 768px) {
 
