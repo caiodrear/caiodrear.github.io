@@ -279,17 +279,6 @@ body {
     width: auto;
 }
 
-/* stands in for the hero plate once the hero stacks -- sized off the candle */
-.topbar-portrait {
-    display: none;
-    width: 46px;
-    height: 46px;
-    border-radius: var(--radius-circle);
-    border: 1px solid var(--outline-variant);
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
 /* -------------------------------------- *\
     #SECTION
 \* -------------------------------------- */
@@ -340,7 +329,7 @@ body {
 }
 
 .hero-banner {
-    width: 176px;
+    width: 148px;
     border-radius: var(--radius-circle);
     /* engraved-plate ring */
     border: 1px solid var(--outline-variant);
@@ -778,6 +767,50 @@ body {
 }
 
 /* -------------------------------------- *\
+    #RECIPE LOADING
+\* -------------------------------------- */
+
+/* held back so a quick load never flashes it */
+.recipe-loading {
+    display: grid;
+    place-items: center;
+    padding-block: 64px 48px;
+    animation: candle-appear 300ms ease 320ms both;
+}
+
+.recipe-loading img {
+    width: 44px;
+    height: auto;
+    animation: candle-gutter 3.2s ease-in-out infinite;
+}
+
+@keyframes candle-appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* uneven steps, so it reads as a flame rather than a pulse */
+@keyframes candle-gutter {
+    0% { opacity: 1; filter: drop-shadow(0 -3px 9px hsl(32 85% 58% / 0.5)); }
+    9% { opacity: 0.78; filter: drop-shadow(0 -1px 4px hsl(32 85% 58% / 0.22)); }
+    17% { opacity: 0.97; filter: drop-shadow(0 -3px 8px hsl(32 85% 58% / 0.44)); }
+    31% { opacity: 0.7; filter: drop-shadow(0 -1px 3px hsl(32 85% 58% / 0.18)); }
+    43% { opacity: 1; filter: drop-shadow(0 -4px 11px hsl(32 85% 58% / 0.55)); }
+    58% { opacity: 0.85; filter: drop-shadow(0 -2px 6px hsl(32 85% 58% / 0.3)); }
+    72% { opacity: 0.98; filter: drop-shadow(0 -3px 9px hsl(32 85% 58% / 0.48)); }
+    86% { opacity: 0.74; filter: drop-shadow(0 -1px 4px hsl(32 85% 58% / 0.2)); }
+    100% { opacity: 1; filter: drop-shadow(0 -3px 9px hsl(32 85% 58% / 0.5)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .recipe-loading,
+    .recipe-loading img {
+        animation: none;
+    }
+}
+
+/* -------------------------------------- *\
     #RECIPE SHEET
 \* -------------------------------------- */
 
@@ -970,12 +1003,8 @@ body {
     #MEDIA QUERIES
 \* -------------------------------------- */
 
-/* below this the hero would stack, so the plate moves up beside the candle instead */
+/* below this the hero would stack, so it becomes a row instead */
 @media (max-width: 767px) {
-
-    .topbar-portrait {
-        display: block;
-    }
 
     /* the card is full width here, so the list runs across and wraps when it must */
     .about-list {
@@ -984,16 +1013,48 @@ body {
         gap: 10px 26px;
     }
 
+    /* the plate sits beside the byline and the paragraph drops below both.
+       display:contents lifts the hero-content children into this grid. */
+    .hero .container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 18px;
+        row-gap: 0;
+        align-items: start;
+    }
+
+    .hero-content {
+        display: contents;
+    }
+
+    /* 104px is the measured height of the subtitle, name and rule stacked */
     .hero-banner {
-        display: none;
+        grid-column: 1;
+        grid-row: 1 / 3;
+        align-self: center;
+        width: 104px;
+    }
+
+    .hero .section-subtitle {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: end;
+    }
+
+    .hero-content .display-small {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .hero .section-text {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        margin-block-start: 14px;
+        max-width: none;
     }
 
     .hero {
-        padding-block-start: calc(var(--top-bar-height) + 18px);
-    }
-
-    .hero .container {
-        gap: 0;
+        padding-block-start: calc(var(--top-bar-height) + 22px);
     }
 }
 

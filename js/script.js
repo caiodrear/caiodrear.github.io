@@ -244,6 +244,8 @@ const buildRecipeIndex = async function () {
     const $index = document.querySelector("[data-recipe-index]");
     if (!$index) return;
 
+    const $loading = document.querySelector("[data-recipe-loading]");
+
     let recipes;
     try {
         const response = await fetch(RECIPE_INDEX);
@@ -255,6 +257,8 @@ const buildRecipeIndex = async function () {
         message.textContent = "The recipes could not be loaded.";
         $index.append(message);
         return;
+    } finally {
+        $loading?.remove();
     }
 
     recipes.forEach(recipe => $index.append(recipeCard(recipe)));
