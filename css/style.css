@@ -977,6 +977,13 @@ body {
         display: block;
     }
 
+    /* the card is full width here, so the list runs across and wraps when it must */
+    .about-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 26px;
+    }
+
     .hero-banner {
         display: none;
     }

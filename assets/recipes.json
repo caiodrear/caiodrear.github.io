@@ -1,17 +1,49 @@
 [
-  "black-dal.json",
-  "mung-dal.json",
-  "bunny-chow.json",
-  "rajma.json",
-  "cilbir.json",
-  "butter-chicken.json",
+  {
+    "name": "Black Dal",
+    "flag": "🇮🇳",
+    "file": "black-dal.json"
+  },
+  {
+    "name": "Mung Dal",
+    "flag": "🇮🇳",
+    "file": "mung-dal.json"
+  },
+  {
+    "name": "Bunny Chow",
+    "flag": "🇿🇦",
+    "file": "bunny-chow.json"
+  },
+  {
+    "name": "Rajma",
+    "flag": "🇮🇳",
+    "file": "rajma.json"
+  },
+  {
+    "name": "Çılbır",
+    "flag": "🇹🇷",
+    "file": "cilbir.json"
+  },
+  {
+    "name": "Butter Chicken",
+    "flag": "🇮🇳",
+    "file": "butter-chicken.json"
+  },
   {
     "name": "Fennel & Lemon Risotto",
     "flag": "🇮🇹",
     "url": "https://www.bbcgoodfood.com/recipes/fennel-lemon-risotto"
   },
-  "black-bean-soup.json",
-  "chorizo-potatoes-stew.json",
+  {
+    "name": "Black Bean Soup",
+    "flag": "🇨🇷",
+    "file": "black-bean-soup.json"
+  },
+  {
+    "name": "Potato & Chorizo Stew",
+    "flag": "🇪🇸",
+    "file": "chorizo-potatoes-stew.json"
+  },
   {
     "name": "10-Minute Dal",
     "flag": "🇮🇳",
@@ -22,6 +54,14 @@
     "flag": "🇮🇹",
     "url": "https://www.waitrose.com/home/recipes/recipe_directory/b/broccoli-and-bluecheeserisottowithtoastedpecans.html"
   },
-  "lentils-stew.json",
-  "gujarati-dal.json"
+  {
+    "name": "Lentils Stew",
+    "flag": "🇪🇸",
+    "file": "lentils-stew.json"
+  },
+  {
+    "name": "Gujarati Dal",
+    "flag": "🇮🇳",
+    "file": "gujarati-dal.json"
+  }
 ]

@@ -30,21 +30,17 @@ $tabBtn.forEach(item => {
 /* -------------------------------------- *\
     #RECIPES
 
-    /assets/recipes.json is an ordered list sitting next to the folder it
-    describes. A string is a local recipe file; an object is one hosted
-    elsewhere:
+    /assets/recipes.json lists every recipe in display order. It is the only
+    thing the page needs to draw the index, so it is one request:
 
-        [
-          "black-dal.json",
-          { "name": "10-Minute Dal", "flag": "🇮🇳", "url": "https://..." }
-        ]
+        { "name": "Lentils Stew",  "flag": "🇪🇸", "file": "lentils-stew.json" }
+        { "name": "10-Minute Dal", "flag": "🇮🇳", "url": "https://..." }
 
-    Each local file carries everything its card and sheet need, so the list and
-    the sheet are built from one fetch per recipe -- opening a sheet costs nothing.
+    The body of each recipe sits in its own file under /assets/recipes/, and is
+    only read when its sheet is opened. Name and flag are not repeated there, so
+    there is one place to rename a recipe.
 
         {
-          "name": "Lentils Stew",
-          "flag": "🇪🇸",
           "serves": 4,
           "ingredients": { "lentils": "300g", "salt": "" },
           "method": ["Place a large pot...", "Add the bay leaves..."]
@@ -58,8 +54,26 @@ $tabBtn.forEach(item => {
         ]
 \* -------------------------------------- */
 
-const RECIPE_DIR = "./assets/recipes/";
 const RECIPE_INDEX = "./assets/recipes.json";
+const RECIPE_DIR = "./assets/recipes/";
+
+/** @type {Map<string, Promise<object>>} one request per body, however often it is opened */
+const bodies = new Map();
+
+/**
+ * @param {string} file
+ * @returns {Promise<object>}
+ */
+const loadBody = function (file) {
+    if (!bodies.has(file)) {
+        bodies.set(file, fetch(RECIPE_DIR + file).then(response => {
+            if (!response.ok) throw new Error(response.status);
+            return response.json();
+        }));
+    }
+
+    return bodies.get(file);
+};
 
 /**
  * Flattens either ingredient shape into one list of headed groups.
@@ -84,18 +98,18 @@ const $sheetBody = document.querySelector("[data-recipe-body]");
 /**
  * @param {object} recipe an already-loaded local recipe
  */
-const openRecipe = function (recipe) {
+const openRecipe = async function (entry) {
     $sheetBody.innerHTML = "";
 
     const head = document.createElement("header");
     head.className = "recipe-head";
     $sheetBody.append(head);
 
-    if (recipe.flag) {
+    if (entry.flag) {
         const flag = document.createElement("span");
         flag.className = "flag";
         flag.style.margin = "0 auto 6px";
-        flag.textContent = recipe.flag;
+        flag.textContent = entry.flag;
         head.append(flag);
     }
 
@@ -105,8 +119,22 @@ const openRecipe = function (recipe) {
     head.append(eyebrow);
 
     const title = document.createElement("h2");
-    title.textContent = recipe.name;
+    title.textContent = entry.name;
     head.append(title);
+
+    // the head is known from the index, so the sheet opens at once
+    if (!$sheet.open) $sheet.showModal();
+
+    let recipe;
+    try {
+        recipe = await loadBody(entry.file);
+    } catch (error) {
+        const message = document.createElement("p");
+        message.className = "recipe-error";
+        message.textContent = "This recipe could not be read.";
+        $sheetBody.append(message);
+        return;
+    }
 
     if (recipe.serves) {
         const serves = document.createElement("p");
@@ -158,14 +186,12 @@ const openRecipe = function (recipe) {
     const foot = document.createElement("footer");
     foot.className = "recipe-foot";
     const raw = document.createElement("a");
-    raw.href = RECIPE_DIR + recipe.file;
+    raw.href = RECIPE_DIR + entry.file;
     raw.target = "_blank";
     raw.rel = "noopener";
     raw.textContent = "json";
     foot.append(raw);
     $sheetBody.append(foot);
-
-    if (!$sheet.open) $sheet.showModal();
 };
 
 /**
@@ -214,49 +240,30 @@ const recipeCard = function (entry) {
     return card;
 };
 
-/**
- * @param {string} file
- * @returns {object} a stand-in so a failed recipe is visible rather than missing
- */
-const unreadable = function (file) {
-    console.warn(`Could not read recipe: ${file}`);
-    return {
-        file,
-        url: RECIPE_DIR + file,
-        name: file.replace(/\.json$/, "").replace(/-/g, " ")
-    };
-};
-
 const buildRecipeIndex = async function () {
     const $index = document.querySelector("[data-recipe-index]");
     if (!$index) return;
 
-    let manifest;
+    let recipes;
     try {
         const response = await fetch(RECIPE_INDEX);
         if (!response.ok) throw new Error(response.status);
-        manifest = await response.json();
+        recipes = await response.json();
     } catch (error) {
         const message = document.createElement("p");
         message.className = "recipe-error";
-        message.textContent = "The recipe index could not be loaded.";
+        message.textContent = "The recipes could not be loaded.";
         $index.append(message);
         return;
     }
 
-    // fetched in parallel, but Promise.all keeps the manifest's order
-    const entries = await Promise.all(manifest.map(async entry => {
-        if (typeof entry !== "string") return entry;
-        try {
-            const response = await fetch(RECIPE_DIR + entry);
-            if (!response.ok) throw new Error(response.status);
-            return { ...await response.json(), file: entry };
-        } catch (error) {
-            return unreadable(entry);
-        }
-    }));
+    recipes.forEach(recipe => $index.append(recipeCard(recipe)));
 
-    entries.forEach(entry => $index.append(recipeCard(entry)));
+    // once the index is on screen, warm the bodies so opening a sheet is instant
+    const whenIdle = window.requestIdleCallback ?? (task => setTimeout(task, 300));
+    whenIdle(() => recipes
+        .filter(recipe => recipe.file)
+        .forEach(recipe => loadBody(recipe.file).catch(() => { })));
 };
 
 document.querySelector("[data-recipe-close]")?.addEventListener("click", () => $sheet.close());
