@@ -1,0 +1,53 @@
+{
+  "serves": 2,
+  "sections": [
+    {
+      "title": "livers",
+      "ingredients": {
+        "fresh": {
+          "chicken livers": "250g",
+          "garlic, very finely chopped": "1 clove"
+        },
+        "cupboard": {
+          "vegetable oil": "25ml"
+        }
+      }
+    },
+    {
+      "title": "spice paste",
+      "ingredients": {
+        "fresh": {
+          "garlic paste": "5g",
+          "ginger paste": "5g",
+          "full-fat Greek yoghurt": "40g"
+        },
+        "cupboard": {
+          "fine sea salt": "1/2 tsp",
+          "ground cumin": "1/2 tsp",
+          "ground turmeric": "1/4 tsp",
+          "deggi mirch chilli powder": "1/2 tsp",
+          "garam masala": "1/2 tsp",
+          "vegetable oil": "1 tsp"
+        }
+      }
+    },
+    {
+      "title": "to serve",
+      "ingredients": {
+        "fresh": {
+          "toast": "4 slices",
+          "lime wedges": "",
+          "coriander leaves": ""
+        }
+      }
+    }
+  ],
+  "method": [
+    "Mix together the ingredients for the spice paste in a medium bowl.",
+    "Trim the chicken livers of any connective tissue or fat, and slice any large parts in two. Add to the spice paste and toss to coat. Cover and marinate in the fridge for 30 minutes.",
+    "Remove the livers from the fridge to take the chill off them while you cook the garlic.",
+    "Warm a frying pan over a low heat. Add the oil and the chopped garlic and cook for about 8 minutes, until golden.",
+    "Add the livers with their marinade, stir well and turn the heat up. Sauté for 6-8 minutes until the livers and spice paste are both cooked, stirring frequently.",
+    "Pile onto warm toast and serve at once, with lime wedges and coriander leaves."
+  ]
+}

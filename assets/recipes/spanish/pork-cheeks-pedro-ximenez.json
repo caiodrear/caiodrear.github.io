@@ -1,0 +1,25 @@
+{
+  "serves": 4,
+  "ingredients": {
+    "fresh": {
+      "pork cheeks": "1kg",
+      "carrots": "3x",
+      "onion": "1 medium",
+      "celery": "1 stalk",
+      "garlic": "6 cloves",
+      "tomatoes": "3x",
+      "thyme": "6 sprigs"
+    },
+    "cupboard": {
+      "flour": "2 tbsp",
+      "Pedro Ximénez sherry": "175ml",
+      "olive oil": "100ml",
+      "cinnamon stick": "1/4",
+      "cloves": "1x",
+      "black peppercorns": "5x",
+      "bay leaves": "2x",
+      "beef stock": "1 litre",
+      "salt": "1 tsp"
+    }
+  }
+}

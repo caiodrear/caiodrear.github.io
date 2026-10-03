@@ -224,12 +224,13 @@ const buildList = async function (selector, file, build, failure) {
     /assets/recipes.json lists every recipe in display order. It is the only
     thing the page needs to draw the index, so it is one request:
 
-        { "name": "Lentils Stew",  "flag": "🇪🇸", "file": "lentils-stew.json" }
+        { "name": "Lentils Stew",  "flag": "🇪🇸", "file": "spanish/lentils-stew.json" }
         { "name": "10-Minute Dal", "flag": "🇮🇳", "url": "https://..." }
 
-    The body of each recipe sits in its own file under /assets/recipes/, and is
-    only read when its sheet is opened. Name and flag are not repeated there, so
-    there is one place to rename a recipe. A recipe taken from elsewhere carries
+    The body of each recipe sits in its own file under /assets/recipes/, in a
+    folder named for its cuisine, and is only read when its sheet is opened.
+    Name and flag are not repeated there, so there is one place to rename a
+    recipe. A recipe taken from elsewhere carries
     a "source", which the foot of the sheet credits.
 
         {

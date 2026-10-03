@@ -1,0 +1,36 @@
+{
+  "serves": 4,
+  "sections": [
+    {
+      "title": null,
+      "ingredients": {
+        "fresh": {
+          "pork shoulder, diced": "300g",
+          "stewing beef, diced": "300g",
+          "lamb or mutton shoulder, diced": "300g",
+          "onions, sliced": "2x",
+          "carrots, in chunks": "2x"
+        },
+        "cupboard": {
+          "vegetable oil or lard": "1 tbsp",
+          "black peppercorns": "2 tsp",
+          "allspice berries": "1 tsp",
+          "bay leaves": "3x",
+          "salt": "",
+          "pepper": ""
+        }
+      }
+    },
+    {
+      "title": "to serve",
+      "ingredients": {
+        "fresh": {
+          "mashed potato": ""
+        },
+        "cupboard": {
+          "lingonberry jam": ""
+        }
+      }
+    }
+  ]
+}

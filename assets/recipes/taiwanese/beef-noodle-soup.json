@@ -1,0 +1,82 @@
+{
+  "sections": [
+    {
+      "title": "blanching",
+      "ingredients": {
+        "fresh": {
+          "beef shanks": "2x",
+          "beef tendon": "2x",
+          "green onion, quartered": "2x",
+          "ginger, sliced": "2in"
+        },
+        "cupboard": {
+          "Shaoxing wine": "1/4 cup"
+        }
+      }
+    },
+    {
+      "title": "spices",
+      "ingredients": {
+        "cupboard": {
+          "star anise": "4x",
+          "black cardamom pods": "2x",
+          "cinnamon stick": "1x",
+          "cloves": "3x",
+          "bay leaves": "2x",
+          "dried red chillies": "3x",
+          "fennel seeds": "1/2 tbsp",
+          "Sichuan peppercorns": "1/2 tbsp",
+          "coriander seeds": "1/2 tbsp"
+        }
+      }
+    },
+    {
+      "title": "soup base",
+      "ingredients": {
+        "fresh": {
+          "onion, sliced": "1x",
+          "green onion, quartered": "2x",
+          "garlic, smashed": "8 cloves",
+          "ginger, sliced": "2in",
+          "tomatoes, chopped": "4x"
+        },
+        "cupboard": {
+          "neutral oil": "3 tbsp",
+          "doubanjiang": "3 tbsp",
+          "Shaoxing wine": "1/2 cup",
+          "light soy sauce": "6 tbsp",
+          "dark soy sauce": "4 tbsp",
+          "rock sugar": "2 tbsp",
+          "Chinese five spice": "1/2 tsp",
+          "white pepper": "1/2 tsp"
+        }
+      }
+    },
+    {
+      "title": "soup",
+      "ingredients": {
+        "fresh": {
+          "apple, diced": "1/2"
+        },
+        "cupboard": {
+          "beef broth": "10 cups",
+          "salt": "",
+          "MSG": ""
+        }
+      }
+    },
+    {
+      "title": "assembly",
+      "ingredients": {
+        "fresh": {
+          "fresh noodles": "",
+          "scallions": "",
+          "coriander": ""
+        },
+        "cupboard": {
+          "pickled mustard greens": ""
+        }
+      }
+    }
+  ]
+}
