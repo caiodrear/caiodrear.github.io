@@ -1,0 +1,52 @@
+{
+  "sections": [
+    {
+      "title": "larb",
+      "ingredients": {
+        "fresh": {
+          "shallots, thinly sliced": "2 small",
+          "red chilli, julienned": "1x",
+          "ginger, julienned": "2in",
+          "garlic, finely sliced": "3 cloves",
+          "Thai basil": "20g",
+          "limes, juiced": "2x",
+          "mint, chopped": "1 handful",
+          "coriander, chopped": "1 handful"
+        },
+        "cupboard": {
+          "white rice": "75g",
+          "neutral oil": "",
+          "fish sauce": "1.5 tbsp",
+          "palm sugar": "1 tbsp"
+        }
+      }
+    },
+    {
+      "title": "tofu",
+      "ingredients": {
+        "fresh": {
+          "extra firm tofu": "280g"
+        },
+        "cupboard": {
+          "neutral oil": "",
+          "dark soy sauce": "1 tbsp",
+          "fish sauce": "1 tbsp"
+        }
+      }
+    },
+    {
+      "title": "to serve",
+      "ingredients": {
+        "fresh": {
+          "lettuce or cabbage cups": "",
+          "lime wedges": ""
+        }
+      }
+    }
+  ],
+  "method": [
+    "Toast the rice in a dry pan over medium heat, stirring regularly, until deep golden brown, about 10-15 minutes. Cool, then blitz into a coarse powder. Keep the pan.",
+    "Crumble the tofu into small mince-like pieces. Heat the pan over medium-high heat with a drizzle of oil, add the tofu and cook for 8-10 minutes until golden and crisp in places. Stir in the soy sauce and fish sauce, then set aside and wipe the pan clean.",
+    "Heat a generous drizzle of oil over high heat. Add the shallots and cook until beginning to caramelise. Add the ginger, garlic and chilli and cook for 2 minutes until fragrant. Turn off the heat and stir in the basil, lime juice, fish sauce, sugar and toasted rice powder, tossing to combine."
+  ]
+}

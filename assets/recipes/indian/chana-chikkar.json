@@ -1,0 +1,53 @@
+{
+  "sections": [
+    {
+      "title": null,
+      "ingredients": {
+        "fresh": {
+          "potato": "1 medium",
+          "curd": "80g",
+          "onions, finely chopped": "2 medium",
+          "ginger, finely chopped": "15g",
+          "green chillies, chopped": "2x",
+          "coriander leaves": ""
+        },
+        "cupboard": {
+          "dried chickpeas": "250g",
+          "bay leaf": "1x",
+          "cooking soda": "1 pinch",
+          "mustard oil": "1 1/2 tbsp",
+          "turmeric": "1/2 tsp",
+          "chilli powder": "2 tsp",
+          "coriander powder": "2 tsp",
+          "chana masala": "1 tbsp",
+          "sugar": "1 tsp",
+          "salt": ""
+        }
+      }
+    },
+    {
+      "title": "tadka",
+      "ingredients": {
+        "fresh": {
+          "green chillies, slit": "2x",
+          "ginger, julienned": ""
+        },
+        "cupboard": {
+          "ghee": "1 tbsp",
+          "kasuri methi": "1 tsp",
+          "hing": "1 pinch"
+        }
+      }
+    }
+  ],
+  "method": [
+    "Soak the chickpeas overnight. Drain and rinse well.",
+    "Pressure cook the chickpeas with the halved potato, bay leaf, cooking soda, salt and enough water to cover, for 4-5 whistles on high, then simmer 5 minutes. Let the pressure release naturally.",
+    "Blend the potato, 1 tbsp of the chickpeas, the curd and a splash of water to a smooth purée.",
+    "Heat the mustard oil until smoking. Add the onion, ginger and chopped green chillies and cook until golden.",
+    "Add the turmeric, chilli powder, coriander powder and chana masala. Mix well.",
+    "Pour in the curd mix and cook, stirring, until the oil separates from the gravy.",
+    "Add the remaining chickpeas and their cooking liquid. Season with salt and sugar and simmer a few minutes until thick and mushy.",
+    "For the tadka, crackle the slit chillies and ginger in hot ghee with the kasuri methi and hing, and pour over. Garnish with coriander and serve."
+  ]
+}

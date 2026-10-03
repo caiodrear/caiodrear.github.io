@@ -133,5 +133,40 @@
     "name": "Khatti Dal",
     "flag": "🇮🇳",
     "file": "indian/khatti-dal.json"
+  },
+  {
+    "name": "Fesenjan",
+    "flag": "🇮🇷",
+    "file": "persian/fesenjan.json"
+  },
+  {
+    "name": "Chana Chikkar",
+    "flag": "🇮🇳",
+    "file": "indian/chana-chikkar.json"
+  },
+  {
+    "name": "Cacio e Pere",
+    "flag": "🇮🇹",
+    "file": "italian/cacio-e-pere.json"
+  },
+  {
+    "name": "Mustard Butter Beans",
+    "flag": "🇬🇧",
+    "file": "british/mustard-beans.json"
+  },
+  {
+    "name": "Kaeng Ranjuan",
+    "flag": "🇹🇭",
+    "file": "thai/kaeng-ranjuan.json"
+  },
+  {
+    "name": "Tofu Larb",
+    "flag": "🇹🇭",
+    "file": "thai/tofu-larb.json"
+  },
+  {
+    "name": "Shirazi Salad",
+    "flag": "🇮🇷",
+    "file": "persian/shirazi-salad.json"
   }
 ]
