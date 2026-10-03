@@ -160,9 +160,9 @@
     "file": "thai/kaeng-ranjuan.json"
   },
   {
-    "name": "Tofu Larb",
-    "flag": "🇹🇭",
-    "file": "thai/tofu-larb.json"
+    "name": "Larb",
+    "flag": "🇱🇦",
+    "file": "lao/larb.json"
   },
   {
     "name": "Shirazi Salad",
